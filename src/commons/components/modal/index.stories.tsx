@@ -9,30 +9,81 @@ const meta: Meta<typeof Modal> = {
   },
   tags: ["autodocs"],
   argTypes: {
-    isOpen: {
-      control: { type: "boolean" },
+    title: { control: "text" },
+    description: { control: "text" },
+    variant: {
+      control: { type: "select" },
+      options: ["info", "danger"],
     },
-    onClose: {
-      action: "closed",
+    actions: {
+      control: { type: "inline-radio" },
+      options: ["single", "dual"],
     },
+    theme: {
+      control: { type: "inline-radio" },
+      options: ["light", "dark"],
+    },
+    size: {
+      control: { type: "inline-radio" },
+      options: ["small", "medium"],
+    },
+    confirmText: { control: "text" },
+    cancelText: { control: "text" },
+    className: { control: false },
+    onClose: { action: "onClose" },
+    onConfirm: { action: "onConfirm" },
+    onCancel: { action: "onCancel" },
+  },
+  args: {
+    title: "안내",
+    description: "이 작업을 진행하시겠습니까?",
+    variant: "info",
+    actions: "dual",
+    theme: "light",
+    size: "medium",
+    confirmText: "확인",
+    cancelText: "취소",
   },
 };
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-// 기본 스토리
-export const Default: Story = {
+export const Default: Story = {};
+
+export const DangerDual: Story = {
   args: {
-    isOpen: true,
-    children: "Modal Content",
+    title: "삭제 경고",
+    description: "삭제한 내용은 되돌릴 수 없습니다.",
+    variant: "danger",
+    actions: "dual",
+    confirmText: "삭제",
+    cancelText: "취소",
   },
 };
 
-// 닫힌 상태
-export const Closed: Story = {
+export const InfoSingle: Story = {
   args: {
-    isOpen: false,
-    children: "Modal Content",
+    title: "완료",
+    description: "작업이 성공적으로 완료되었습니다.",
+    variant: "info",
+    actions: "single",
+    confirmText: "확인",
+  },
+};
+
+export const DarkTheme: Story = {
+  args: {
+    title: "다크 테마",
+    description: "다크 테마에서의 모달 예시입니다.",
+    theme: "dark",
+  },
+};
+
+export const SmallSize: Story = {
+  args: {
+    title: "작은 사이즈",
+    description: "small 사이즈 가이드에 맞춘 모달입니다.",
+    size: "small",
   },
 };

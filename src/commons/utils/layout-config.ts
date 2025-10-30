@@ -8,7 +8,10 @@ export interface LayoutConfig {
  */
 export function getLayoutConfig(pathname: string): LayoutConfig {
   // 로그인, 회원가입 페이지 - 헤더와 배너 모두 숨김
-  if (pathname.startsWith("/login") || pathname.startsWith("/signup")) {
+  if (
+    pathname.startsWith("/auth/login") ||
+    pathname.startsWith("/auth/signup")
+  ) {
     return {
       showHeader: false,
       showBanner: false,

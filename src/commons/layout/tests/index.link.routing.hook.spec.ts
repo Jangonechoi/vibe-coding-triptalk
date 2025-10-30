@@ -1,5 +1,6 @@
 import { test, expect } from "@playwright/test";
 import { URL_PATHS } from "@/commons/constants/url";
+import path from "path";
 
 test.describe("Layout header link routing", () => {
   test("logo click navigates to boards list", async ({ page }) => {
@@ -25,6 +26,12 @@ test.describe("Layout header link routing", () => {
     await page.waitForURL(`**${URL_PATHS.AUTH.LOGIN}`);
     expect(page.url()).toContain(URL_PATHS.AUTH.LOGIN);
   });
+
+  test("boards write button navigates to boards new page", async ({ page }) => {
+    await page.goto(URL_PATHS.BOARDS.LIST);
+    await page.getByTestId("boards-list-ready").waitFor();
+    await page.getByTestId("boards-write-button").click();
+    await page.waitForURL(`**${URL_PATHS.BOARDS.NEW}`);
+    expect(page.url()).toContain(URL_PATHS.BOARDS.NEW);
+  });
 });
-
-

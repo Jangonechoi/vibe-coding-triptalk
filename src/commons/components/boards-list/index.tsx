@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
+import { URL_PATHS } from "@/commons/constants/url";
 import { Searchbar } from "@/commons/components/searchbar";
 import { Button } from "@/commons/components/button";
 import { Pagination } from "@/commons/components/pagination";
@@ -76,6 +78,7 @@ const sampleBoards: BoardItem[] = [
 ];
 
 export default function BoardsList() {
+  const router = useRouter();
   const [dateRange, setDateRange] = useState<DateRange>({
     startDate: "",
     endDate: "",
@@ -102,12 +105,11 @@ export default function BoardsList() {
   };
 
   const handleWriteClick = () => {
-    // 게시물 작성 페이지로 이동
-    console.log("게시물 작성 페이지로 이동");
+    router.push(URL_PATHS.BOARDS.NEW);
   };
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} data-testid="boards-list-ready">
       {/* 제목 */}
       <h1 className={styles.title}>트립토크 게시판</h1>
 
@@ -251,12 +253,13 @@ export default function BoardsList() {
               검색
             </Button>
           </div>
-          
+
           {/* 트립토크 등록 버튼 */}
           <div className={styles.writeButton}>
             <Button
               variant="primary"
               size="medium"
+              data-testid="boards-write-button"
               onClick={handleWriteClick}
               leftIcon={
                 <svg

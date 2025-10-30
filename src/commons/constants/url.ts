@@ -17,7 +17,7 @@ export const URL_PATHS = {
   // 게시물 관련
   BOARDS: {
     LIST: "/boards",
-    NEW: "/boards/new",
+    NEW: "/boards/write",
     DETAIL: (boardId: string | number) => `/boards/${boardId}`,
   },
 } as const;
@@ -139,7 +139,7 @@ export const isValidPath = (path: string): boolean => {
       }
       return false;
     }) ||
-    (path.startsWith("/boards/") && path !== "/boards/new")
+    (path.startsWith("/boards/") && path !== "/boards/write")
   );
 };
 
@@ -153,7 +153,7 @@ export const matchDynamicRoute = (
   const boardDetailPattern = /^\/boards\/([^\/]+)$/;
   const boardDetailMatch = path.match(boardDetailPattern);
 
-  if (boardDetailMatch && path !== "/boards/new") {
+  if (boardDetailMatch && path !== "/boards/write") {
     return {
       matched: true,
       params: { boardId: boardDetailMatch[1] },

@@ -1,4 +1,3 @@
-// @ts-expect-error - Storybook types not available in build
 import type { Meta, StoryObj } from "@storybook/react";
 import { Button } from "./index";
 

@@ -1,0 +1,194 @@
+/* comment-write 컴포넌트 스타일 */
+
+.container {
+  width: 1280px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* 별점 영역 */
+.starRating {
+  width: 1280px;
+  height: 24px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.starButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.star {
+  width: 24px;
+  height: 24px;
+  transition: opacity 0.2s ease;
+}
+
+.starFilled {
+  opacity: 1;
+}
+
+.starEmpty {
+  opacity: 0.3;
+}
+
+/* 작성자와 비밀번호 입력 영역 */
+.authorPasswordArea {
+  width: 1280px;
+  height: 80px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.authorInput,
+.passwordInput {
+  width: 312px;
+  height: 80px;
+}
+
+/* 댓글 입력 영역 */
+.commentInputArea {
+  width: 1280px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.commentInput {
+  width: 1280px;
+  height: 144px;
+  position: relative;
+}
+
+/* Input 컴포넌트 스타일 오버라이드 - 더 구체적인 선택자 사용 */
+.commentInput div[class*="inputContainer"] {
+  height: 144px;
+  align-items: flex-start;
+  position: relative;
+}
+
+.commentInput div[class*="inputContainer"] textarea {
+  height: 96px;
+  min-height: 96px;
+  resize: none;
+}
+
+/* countText 위치 조정 */
+.commentInput div[class*="helperContainer"] {
+  position: absolute;
+  bottom: 12px;
+  right: 16px;
+  margin-top: 0;
+  justify-content: flex-end;
+  width: auto;
+}
+
+.commentInput div[class*="countText"] {
+  margin-left: auto;
+}
+
+/* 버튼 영역 */
+.buttonArea {
+  width: 1280px;
+  height: 48px;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.cancelButton {
+  width: 64px;
+  height: 48px;
+  background: var(--color-gray-w);
+  border: 1px solid var(--color-gray-B);
+  border-radius: 8px;
+  color: var(--color-gray-B);
+  font-family: var(--font-family-korean);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--typography-sb_18_24-font-size-desktop);
+  line-height: var(--typography-sb_18_24-line-height-desktop);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cancelButton:hover {
+  background-color: var(--color-gray-50);
+}
+
+.submitButton {
+  width: 99px;
+  height: 48px;
+  background-color: var(--color-gray-B);
+  border: none;
+  border-radius: 8px;
+  color: var(--color-gray-w);
+  font-family: var(--font-family-korean);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--typography-sb_18_24-font-size-desktop);
+  line-height: var(--typography-sb_18_24-line-height-desktop);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submitButton:hover {
+  background-color: var(--color-gray-800);
+}
+
+/* 모바일 스타일 */
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+
+  .starRating {
+    width: 100%;
+  }
+
+  .authorPasswordArea {
+    width: 100%;
+    flex-direction: column;
+    height: auto;
+    gap: 24px;
+  }
+
+  .authorInput,
+  .passwordInput {
+    width: 100%;
+    height: 80px;
+  }
+
+  .commentInputArea {
+    width: 100%;
+  }
+
+  .commentInput {
+    width: 100%;
+  }
+
+  .buttonArea {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cancelButton,
+  .submitButton {
+    flex: 1;
+    max-width: 200px;
+  }
+}

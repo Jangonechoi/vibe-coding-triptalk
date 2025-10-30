@@ -19,11 +19,9 @@
 
 핵심요구사항) HTML과 flexbox를 활용한 와이어프레임 구조만 만들어낼 것.
 
+
 핵심요구사항) 각 영역은 아래의 수치값을 그대로 반영할 것. (단위: px)
-                - header: 1168 * 60
-                - {gap}: 1168 * 24
-                - banner: 1168 * 240
-                - {gap}: 1168 * 24
-                - navigation: 1168 * 48
-                - {children}: 1168 * auto
-                - footer: 1168 * 160
+                - header: 1920 * 80
+                - banner: 1920 * 516
+                - {gap}: 1920 * 40
+                - {children}: 1920 * auto

@@ -1,0 +1,288 @@
+/* Boards List Component Styles */
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* 제목 스타일 */
+.title {
+  font-size: var(--typography-b_28_36-font-size-mobile);
+  line-height: var(--typography-b_28_36-line-height-mobile);
+  font-weight: var(--typography-b_28_36-font-weight);
+  font-family: var(--typography-b_28_36-font-family);
+  color: var(--color-gray-B);
+  margin: 0 0 24px 0;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: var(--typography-b_28_36-font-size-desktop);
+    line-height: var(--typography-b_28_36-line-height-desktop);
+  }
+}
+
+/* 검색 영역 */
+.searchSection {
+  margin-bottom: 24px;
+}
+
+.searchControls {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.datePicker {
+  flex: 0 0 289px;
+}
+
+/* 날짜 범위 선택기 */
+.dateRangeContainer {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-gray-50);
+  border-radius: 8px;
+  padding: 12px 16px;
+  height: 48px;
+  gap: 12px;
+}
+
+.calendarIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  color: var(--color-gray-500);
+}
+
+.dateInputs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.dateInputGroup {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.dateInput {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: var(--typography-r_16_24-font-size-mobile);
+  line-height: var(--typography-r_16_24-line-height-mobile);
+  font-weight: var(--typography-r_16_24-font-weight);
+  font-family: var(--typography-r_16_24-font-family);
+  color: var(--color-gray-600);
+  text-align: center;
+  width: 41px;
+}
+
+.dateInput::placeholder {
+  color: var(--color-gray-600);
+}
+
+.dateSeparator {
+  font-size: var(--typography-r_16_24-font-size-mobile);
+  line-height: var(--typography-r_16_24-line-height-mobile);
+  font-weight: var(--typography-r_16_24-font-weight);
+  font-family: var(--typography-r_16_24-font-family);
+  color: var(--color-gray-600);
+  text-align: center;
+  width: 5px;
+}
+
+.dateRangeSeparator {
+  font-size: var(--typography-r_16_24-font-size-mobile);
+  line-height: var(--typography-r_16_24-line-height-mobile);
+  font-weight: var(--typography-r_16_24-font-weight);
+  font-family: var(--typography-r_16_24-font-family);
+  color: var(--color-gray-600);
+  text-align: center;
+  width: 7px;
+}
+
+@media (min-width: 768px) {
+  .dateInput {
+    font-size: var(--typography-r_16_24-font-size-desktop);
+    line-height: var(--typography-r_16_24-line-height-desktop);
+  }
+
+  .dateSeparator,
+  .dateRangeSeparator {
+    font-size: var(--typography-r_16_24-font-size-desktop);
+    line-height: var(--typography-r_16_24-line-height-desktop);
+  }
+}
+
+.searchBar {
+  flex: 1;
+  min-width: 200px;
+}
+
+.searchButton {
+  flex: 0 0 auto;
+}
+
+.writeButton {
+  flex: 0 0 auto;
+}
+
+/* 게시물 목록 컨테이너 */
+.boardContainer {
+  background-color: var(--color-gray-w);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 테이블 헤더 */
+.tableHeader {
+  display: grid;
+  grid-template-columns: 64px 1fr 100px 100px;
+  gap: 24px;
+  padding: 16px 0;
+}
+
+.headerCell {
+  font-size: var(--typography-me_16_20-font-size-mobile);
+  line-height: var(--typography-me_16_20-line-height-mobile);
+  font-weight: var(--typography-me_16_20-font-weight);
+  font-family: var(--typography-me_16_20-font-family);
+  color: var(--color-gray-900);
+  text-align: center;
+}
+
+.headerCell:first-child {
+  text-align: center;
+}
+
+.headerCell:nth-child(2) {
+  text-align: left;
+}
+
+.headerCell:nth-child(3),
+.headerCell:nth-child(4) {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .headerCell {
+    font-size: var(--typography-me_16_20-font-size-desktop);
+    line-height: var(--typography-me_16_20-line-height-desktop);
+  }
+}
+
+/* 게시물 목록 */
+.boardList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.boardItem {
+  display: grid;
+  grid-template-columns: 64px 1fr 100px 100px;
+  gap: 24px;
+  padding: 12px 0;
+  border: 1px solid #f2f2f2;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.boardItem:hover {
+  background-color: var(--color-gray-50);
+}
+
+.cell {
+  font-size: var(--typography-l_14_20-font-size-mobile);
+  line-height: var(--typography-l_14_20-line-height-mobile);
+  font-weight: var(--typography-l_14_20-font-weight);
+  font-family: var(--typography-l_14_20-font-family);
+  color: var(--color-gray-400);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cell:nth-child(2) {
+  color: var(--color-gray-900);
+  font-weight: var(--typography-me_14_20-font-weight);
+  text-align: left;
+  justify-content: flex-start;
+}
+
+.cell:nth-child(3) {
+  color: var(--color-gray-800);
+}
+
+@media (min-width: 768px) {
+  .cell {
+    font-size: var(--typography-l_14_20-font-size-desktop);
+    line-height: var(--typography-l_14_20-line-height-desktop);
+  }
+
+  .cell:nth-child(2) {
+    font-size: var(--typography-me_14_20-font-size-desktop);
+    line-height: var(--typography-me_14_20-line-height-desktop);
+  }
+}
+
+/* 페이지네이션 영역 */
+.paginationSection {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .searchControls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .datePicker,
+  .searchBar,
+  .searchButton,
+  .writeButton {
+    flex: 1;
+  }
+
+  .tableHeader,
+  .boardItem {
+    grid-template-columns: 50px 1fr 80px 80px;
+    gap: 12px;
+  }
+
+  .boardContainer {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tableHeader,
+  .boardItem {
+    grid-template-columns: 40px 1fr 60px 60px;
+    gap: 8px;
+  }
+
+  .headerCell,
+  .cell {
+    font-size: 12px;
+  }
+}

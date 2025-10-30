@@ -1,0 +1,435 @@
+/* boards-detail 컴포넌트 스타일 */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* detail-content: 1280 * 2195 */
+.detailContent {
+  width: 1280px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+/* 제목 스타일 */
+.title {
+  font-family: var(--font-family-korean);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--typography-b_28_36-font-size-desktop);
+  line-height: var(--typography-b_28_36-line-height-desktop);
+  color: var(--color-gray-B);
+  margin: 0;
+  padding: 0;
+  width: 1280px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+}
+
+/* 작성자 정보 영역 */
+.authorInfo {
+  width: 1280px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 프로필과 날짜가 같은 라인에 위치 */
+.authorTopRow {
+  width: 1280px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profileSection {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.profileImage {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.profileImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.authorName {
+  font-family: var(--font-family-korean);
+  font-weight: var(--font-weight-light);
+  font-size: var(--typography-l_14_20-font-size-desktop);
+  line-height: var(--typography-l_14_20-line-height-desktop);
+  color: var(--color-gray-700);
+}
+
+.dateSection {
+  display: flex;
+  align-items: center;
+}
+
+.date {
+  font-family: var(--font-family-korean);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--typography-r_14_20-font-size-desktop);
+  line-height: var(--typography-r_14_20-line-height-desktop);
+  color: var(--color-gray-500);
+}
+
+/* 구분선 */
+.divider {
+  width: 1280px;
+  height: 0px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--color-gray-100);
+}
+
+/* 액션 버튼들 */
+.actionButtons {
+  width: 1280px;
+  height: 24px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.actionButton {
+  width: 24px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.actionButton img {
+  width: 24px;
+  height: 24px;
+}
+
+.gap24 {
+  width: 1280px;
+  height: 24px;
+}
+
+/* 메인 이미지 */
+.mainImage {
+  width: 400px;
+  height: 531px;
+  margin: 0;
+}
+
+.mainImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 본문 내용 */
+.content {
+  width: 1280px;
+  height: 744px;
+  font-family: var(--font-family-korean);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--typography-r_16_24-font-size-desktop);
+  line-height: var(--typography-r_16_24-line-height-desktop);
+  color: var(--color-gray-B);
+  white-space: pre-line;
+  margin: 0;
+  padding: 0;
+}
+
+/* 이미지 갤러리 */
+.imageGallery {
+  width: 1280px;
+  height: 512px;
+  background-color: var(--color-gray-50);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.galleryImage {
+  width: 822px;
+  height: 464px;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.galleryImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.playButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.playIcon {
+  width: 20px;
+  height: 20px;
+  color: #000000;
+  font-size: 12px;
+  margin-left: 2px;
+}
+
+/* 좋아요/싫어요 영역 */
+.reactionArea {
+  width: 1280px;
+  height: 48px;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+}
+
+.badArea {
+  width: 24px;
+  height: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.badArea img {
+  width: 24px;
+  height: 24px;
+}
+
+.badCount {
+  font-family: var(--font-family-korean);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--typography-r_14_20-font-size-desktop);
+  line-height: var(--typography-r_14_20-line-height-desktop);
+  color: var(--color-gray-700);
+}
+
+.goodArea {
+  width: 24px;
+  height: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.goodArea img {
+  width: 24px;
+  height: 24px;
+}
+
+.goodCount {
+  font-family: var(--font-family-korean);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--typography-r_14_20-font-size-desktop);
+  line-height: var(--typography-r_14_20-line-height-desktop);
+  color: var(--color-semantic-red);
+}
+
+/* 버튼 영역 */
+.buttonArea {
+  width: 1280px;
+  height: 40px;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+}
+
+.listButton,
+.editButton {
+  width: 105px;
+  height: 40px;
+  padding: 0 12px;
+  gap: 8px;
+  justify-content: flex-start;
+}
+
+.listButton .button__leftIcon,
+.editButton .button__leftIcon {
+  margin-right: 0;
+}
+
+.listButton .button__label,
+.editButton .button__label {
+  flex: none;
+  margin-left: 0;
+}
+
+/* gap 영역: 1280 * 40 */
+.gap {
+  width: 1280px;
+  height: 40px;
+}
+
+/* detail-footer: 1280 * 392 */
+.detailFooter {
+  width: 1280px;
+  height: 392px;
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* 댓글 헤더 */
+.commentHeader {
+  width: 60px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.commentHeader img {
+  width: 24px;
+  height: 24px;
+}
+
+.commentTitle {
+  font-family: var(--font-family-korean);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--typography-sb_16_24-font-size-desktop);
+  line-height: var(--typography-sb_16_24-line-height-desktop);
+  color: var(--color-gray-B);
+}
+
+/* 별점 영역 */
+.starRating {
+  width: 1280px;
+  height: 24px;
+  display: flex;
+  gap: 8px;
+}
+
+.starRating img {
+  width: 24px;
+  height: 24px;
+}
+
+/* 작성자와 비밀번호 입력 영역 */
+.authorPasswordArea {
+  width: 1280px;
+  height: 80px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.authorInput,
+.passwordInput {
+  width: 312px;
+  height: 80px;
+}
+
+/* 댓글 입력 영역 */
+.commentInputArea {
+  width: 1280px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.commentInput {
+  width: 1280px;
+  height: 144px;
+  position: relative;
+}
+
+/* Input 컴포넌트 스타일 오버라이드 - 더 구체적인 선택자 사용 */
+.commentInput div[class*="inputContainer"] {
+  height: 144px;
+  align-items: flex-start;
+  position: relative;
+}
+
+.commentInput div[class*="inputContainer"] textarea {
+  height: 96px;
+  min-height: 96px;
+  resize: none;
+}
+
+/* countText 위치 조정 */
+.commentInput div[class*="helperContainer"] {
+  position: absolute;
+  bottom: 12px;
+  right: 16px;
+  margin-top: 0;
+  justify-content: flex-end;
+  width: auto;
+}
+
+.commentInput div[class*="countText"] {
+  margin-left: auto;
+}
+
+.commentSubmitButton {
+  width: 99px;
+  height: 48px;
+  background-color: var(--color-gray-300);
+  border: none;
+  border-radius: 8px;
+  color: var(--color-gray-400);
+  font-family: var(--font-family-korean);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--typography-sb_18_24-font-size-desktop);
+  line-height: var(--typography-sb_18_24-line-height-desktop);
+  cursor: pointer;
+  align-self: flex-end;
+  transition: all 0.2s ease;
+}
+
+.commentSubmitButton:hover {
+  background-color: var(--color-gray-B);
+  color: var(--color-gray-w);
+}
+
+/* 댓글 목록 */
+.commentList {
+  width: 1280px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.noComment {
+  font-family: var(--font-family-korean);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--typography-r_14_20-font-size-desktop);
+  line-height: var(--typography-r_14_20-line-height-desktop);
+  color: var(--color-gray-600);
+  margin: 0;
+}

@@ -1,0 +1,390 @@
+/* Searchbar Base Styles */
+.searchbar {
+  position: relative;
+  display: inline-block;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.searchbarContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+.input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: "Pretendard Variable", -apple-system, BlinkMacSystemFont,
+    system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo",
+    "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", sans-serif;
+  transition: all 0.2s ease-in-out;
+}
+
+.input::placeholder {
+  transition: color 0.2s ease-in-out;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 16px;
+  z-index: 1;
+  transition: color 0.2s ease-in-out;
+}
+
+.clearButton {
+  position: absolute;
+  right: 16px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+.clearButton:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Size Variants */
+.searchbar--small {
+  height: 40px;
+}
+
+.searchbar--small .input {
+  height: 40px;
+  padding: 0 16px 0 48px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.searchbar--small .searchIcon {
+  left: 12px;
+  width: 24px;
+  height: 24px;
+}
+
+.searchbar--small .clearButton {
+  right: 12px;
+}
+
+.searchbar--medium {
+  height: 48px;
+}
+
+.searchbar--medium .input {
+  height: 48px;
+  padding: 0 16px 0 48px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.searchbar--medium .searchIcon {
+  left: 12px;
+  width: 24px;
+  height: 24px;
+}
+
+.searchbar--medium .clearButton {
+  right: 12px;
+}
+
+.searchbar--large {
+  height: 56px;
+}
+
+.searchbar--large .input {
+  height: 56px;
+  padding: 0 20px 0 56px;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.searchbar--large .searchIcon {
+  left: 16px;
+  width: 24px;
+  height: 24px;
+}
+
+.searchbar--large .clearButton {
+  right: 16px;
+}
+
+/* Variant Styles */
+.searchbar--primary {
+  background-color: #f2f2f2;
+  border: 1px solid transparent;
+}
+
+.searchbar--primary .input::placeholder {
+  color: #919191;
+}
+
+.searchbar--primary .input {
+  color: #000000;
+}
+
+.searchbar--primary .searchIcon {
+  color: #919191;
+}
+
+.searchbar--primary .clearButton {
+  color: #919191;
+}
+
+.searchbar--secondary {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+}
+
+.searchbar--secondary .input::placeholder {
+  color: #919191;
+}
+
+.searchbar--secondary .input {
+  color: #000000;
+}
+
+.searchbar--secondary .searchIcon {
+  color: #919191;
+}
+
+.searchbar--secondary .clearButton {
+  color: #919191;
+}
+
+.searchbar--tertiary {
+  background-color: #ffffff;
+  border: 1px solid #000000;
+}
+
+.searchbar--tertiary .input::placeholder {
+  color: #919191;
+}
+
+.searchbar--tertiary .input {
+  color: #000000;
+}
+
+.searchbar--tertiary .searchIcon {
+  color: #919191;
+}
+
+.searchbar--tertiary .clearButton {
+  color: #919191;
+}
+
+/* Theme Variants */
+.searchbar--light {
+  /* Light theme styles are default */
+}
+
+.searchbar--dark {
+  background-color: #2a2a2a;
+  border-color: #404040;
+}
+
+.searchbar--dark .input::placeholder {
+  color: #a0a0a0;
+}
+
+.searchbar--dark .input {
+  color: #ffffff;
+}
+
+.searchbar--dark .searchIcon {
+  color: #a0a0a0;
+}
+
+.searchbar--dark .clearButton {
+  color: #a0a0a0;
+}
+
+.searchbar--dark .clearButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* State Variants */
+.searchbar--focused {
+  border-color: #000000;
+  box-shadow: 0 0 0 1px #000000;
+}
+
+.searchbar--focused.searchbar--primary {
+  background-color: #ffffff;
+  border-color: #000000;
+}
+
+.searchbar--focused.searchbar--secondary {
+  border-color: #000000;
+  box-shadow: 0 0 0 1px #000000;
+}
+
+.searchbar--focused.searchbar--tertiary {
+  border-color: #000000;
+  box-shadow: 0 0 0 1px #000000;
+}
+
+.searchbar--focused .input::placeholder {
+  color: #919191;
+}
+
+.searchbar--focused .input {
+  color: #000000;
+  font-weight: 500;
+}
+
+.searchbar--focused .searchIcon {
+  color: #919191;
+}
+
+.searchbar--filled {
+  background-color: #f2f2f2;
+}
+
+.searchbar--filled .input {
+  color: #000000;
+  font-weight: 500;
+}
+
+.searchbar--filled .input::placeholder {
+  color: #000000;
+}
+
+.searchbar--filled .searchIcon {
+  color: #919191;
+}
+
+.searchbar--disabled {
+  background-color: #f5f5f5;
+  border-color: #e0e0e0;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.searchbar--disabled .input {
+  color: #a0a0a0;
+  cursor: not-allowed;
+}
+
+.searchbar--disabled .input::placeholder {
+  color: #a0a0a0;
+}
+
+.searchbar--disabled .searchIcon {
+  color: #a0a0a0;
+}
+
+.searchbar--disabled .clearButton {
+  color: #a0a0a0;
+  cursor: not-allowed;
+}
+
+/* Focus States */
+.searchbar--focused.searchbar--primary .input::placeholder {
+  color: #919191;
+}
+
+.searchbar--focused.searchbar--secondary .input::placeholder {
+  color: #919191;
+}
+
+.searchbar--focused.searchbar--tertiary .input::placeholder {
+  color: #919191;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .searchbar--large {
+    height: 48px;
+  }
+
+  .searchbar--large .input {
+    height: 48px;
+    padding: 0 16px 0 48px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .searchbar--large .searchIcon {
+    left: 12px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .searchbar--large .clearButton {
+    right: 12px;
+  }
+}
+
+/* Animation for cursor blink in focused state */
+.searchbar--focused .input::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 20px;
+  background-color: #000000;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Accessibility */
+.searchbar:focus-within {
+  outline: 2px solid #000000;
+  outline-offset: 2px;
+}
+
+.clearButton:focus {
+  outline: 2px solid #000000;
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .searchbar--primary {
+    border: 2px solid #000000;
+  }
+
+  .searchbar--secondary {
+    border: 2px solid #000000;
+  }
+
+  .searchbar--tertiary {
+    border: 2px solid #000000;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .searchbar,
+  .searchbarContainer,
+  .input,
+  .searchIcon,
+  .clearButton {
+    transition: none;
+  }
+
+  .searchbar--focused .input::after {
+    animation: none;
+  }
+}

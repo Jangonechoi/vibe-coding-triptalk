@@ -1,0 +1,173 @@
+/* Radio Base Styles */
+.radio {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.radio__input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.radio__label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-family: "Pretendard Variable", -apple-system, BlinkMacSystemFont,
+    system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo",
+    "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", sans-serif;
+  font-weight: 500;
+  color: #333333;
+}
+
+.radio__icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.radio__icon__enabled,
+.radio__icon__selected {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.radio__icon__selected {
+  opacity: 0;
+}
+
+.radio__text {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Size Variants */
+.radio--small .radio__text {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.radio--medium .radio__text {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.radio--large .radio__text {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+/* Variant Styles - Primary */
+.radio--primary .radio__icon__enabled,
+.radio--primary .radio__icon__selected {
+  color: #333333;
+}
+
+.radio--primary .radio__text {
+  color: #333333;
+}
+
+/* Variant Styles - Secondary */
+.radio--secondary .radio__icon__enabled,
+.radio--secondary .radio__icon__selected {
+  color: #000000;
+}
+
+.radio--secondary .radio__text {
+  color: #333333;
+}
+
+/* Variant Styles - Tertiary */
+.radio--tertiary .radio__icon__enabled,
+.radio--tertiary .radio__icon__selected {
+  color: #666666;
+}
+
+.radio--tertiary .radio__text {
+  color: #666666;
+}
+
+/* Theme Styles - Light (default) */
+.radio--light {
+  /* Light theme styles are already applied in variants */
+}
+
+/* Theme Styles - Dark */
+.radio--dark.radio--primary .radio__icon__enabled,
+.radio--dark.radio--primary .radio__icon__selected {
+  color: #4a90e2;
+}
+
+.radio--dark.radio--primary .radio__text {
+  color: #ffffff;
+}
+
+.radio--dark.radio--secondary .radio__icon__enabled,
+.radio--dark.radio--secondary .radio__icon__selected {
+  color: #ffffff;
+}
+
+.radio--dark.radio--secondary .radio__text {
+  color: #ffffff;
+}
+
+.radio--dark.radio--tertiary .radio__icon__enabled,
+.radio--dark.radio--tertiary .radio__icon__selected {
+  color: #cccccc;
+}
+
+.radio--dark.radio--tertiary .radio__text {
+  color: #cccccc;
+}
+
+/* Selected State */
+.radio__input:checked + .radio__label .radio__icon__enabled {
+  opacity: 0;
+}
+
+.radio__input:checked + .radio__label .radio__icon__selected {
+  opacity: 1;
+}
+
+/* Focus State */
+.radio__input:focus + .radio__label .radio__icon__enabled,
+.radio__input:focus + .radio__label .radio__icon__selected {
+  outline: 2px solid #2974e5;
+  outline-offset: 2px;
+  border-radius: 50%;
+}
+
+.radio__input:focus:not(:focus-visible) + .radio__label .radio__icon__enabled,
+.radio__input:focus:not(:focus-visible) + .radio__label .radio__icon__selected {
+  outline: none;
+}
+
+/* Disabled State */
+.radio__input:disabled + .radio__label {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.radio__input:disabled + .radio__label .radio__icon__enabled,
+.radio__input:disabled + .radio__label .radio__icon__selected {
+  color: #c7c7c7;
+}
+
+.radio__input:disabled + .radio__label .radio__text {
+  color: #c7c7c7;
+}
+
+/* Hover State */
+.radio__label:hover:not(:has(.radio__input:disabled)) .radio__icon__enabled,
+.radio__label:hover:not(:has(.radio__input:disabled)) .radio__icon__selected {
+  opacity: 0.8;
+}

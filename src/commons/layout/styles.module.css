@@ -1,0 +1,263 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+/* Header Styles */
+.header {
+  width: 100%;
+  height: 80px;
+  background-color: var(--color-gray-w);
+  border-bottom: 1px solid var(--color-gray-200);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerContent {
+  width: 1280px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  height: 40px;
+}
+
+.logoArea {
+  width: 36px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  margin-top: 9px;
+  margin-bottom: 9px;
+  cursor: pointer;
+}
+
+.tap {
+  display: flex;
+  gap: 16px;
+  background-color: transparent;
+  border-radius: 8px;
+  height: 40px;
+}
+
+.tapItem {
+  height: 40px;
+  padding: 0;
+  font-family: var(--font-family-korean);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: var(--color-gray-800);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tapItem:first-child {
+  width: 72px;
+}
+
+.tapItem:nth-child(2) {
+  width: 90px;
+}
+
+.tapItem:nth-child(3) {
+  width: 90px;
+}
+
+.tapItem:hover {
+  background-color: var(--color-gray-50);
+}
+
+.tapItemActive {
+  font-weight: 700;
+  color: var(--color-gray-B);
+  border-bottom: 2px solid var(--color-gray-B);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.loginButton {
+  height: 40px;
+  padding: 0 12px;
+  background-color: var(--color-gray-B);
+  color: var(--color-gray-w);
+  border: none;
+  border-radius: 100px;
+  font-family: var(--font-family-korean);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.loginButton:hover {
+  opacity: 0.8;
+}
+
+.loginButtonIcon {
+  filter: brightness(0) invert(1);
+}
+
+/* Banner Styles */
+.banner {
+  width: 100%;
+  height: 516px;
+  position: relative;
+  overflow: hidden;
+}
+
+.bannerBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-gray-200);
+  z-index: 1;
+}
+
+.bannerOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+  z-index: 2;
+}
+
+.bannerPagination {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 100px;
+  z-index: 3;
+}
+
+.paginationArrow {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: none;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.paginationArrow:hover {
+  opacity: 0.7;
+}
+
+.bannerIndicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  z-index: 3;
+}
+
+.indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.indicatorActive {
+  width: 8px;
+  height: 8px;
+  border-radius: 1000px;
+  background-color: var(--color-gray-w);
+}
+
+.gap {
+  width: 100%;
+  height: 40px;
+  background-color: transparent;
+}
+
+.main {
+  width: 100%;
+  min-height: auto;
+  background-color: var(--color-gray-w);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+  .headerContent {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .headerLeft {
+    gap: 20px;
+  }
+
+  .logoArea {
+    width: 40px;
+  }
+
+  .tapItem {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  .loginButton {
+    padding: 0 8px;
+    font-size: 12px;
+  }
+
+  .bannerPagination {
+    padding: 0 20px;
+  }
+
+  .paginationArrow {
+    width: 32px;
+    height: 32px;
+  }
+
+  .bannerIndicators {
+    bottom: 16px;
+  }
+}

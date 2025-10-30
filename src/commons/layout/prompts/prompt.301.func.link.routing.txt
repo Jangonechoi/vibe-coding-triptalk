@@ -16,9 +16,6 @@
 
 ==============================================
 
-핵심요구사항) navigation 메뉴를 클릭해서 이동시, 
-            styles_activeTab, styles_tabTextActive의 CSS 액티브상태가 변하지 않는데, 변경되도록 수정할 것.
-
 핵심요구사항) 다음의 기능을 playwright 테스트를 활용하여 TDD기반으로 구현할 것.
             1) 테스트 제외 라이브러리
                 - jest
@@ -30,9 +27,6 @@
                     - 페이지 로드 식별 요구사항: 고정식별자 data-testid 대기 방법
                     - 페이지 로드 식별 금지사항: networkidle 대기 방법
 
-            3) 테스트 skip 대상
-                - /pictures
-
 핵심요구사항) layout의 각 영역을 클릭시, url.ts의 페이지URL에 정의된 경로로 이동할 것.
             1) 경로: commons/constants/url.ts
             2) 조건
@@ -40,10 +34,15 @@
                 - 경로를 하드코딩하지 말고, url.ts를 import 하여 적용할 것.
 
             3) header 영역
-                - 로고(민지의다이어리): url.ts에 정의된 일기목록페이지 => /diaries
+                - logoArea의로고(style=black, size=s.svg): url.ts에 정의된 게시물 목록 페이지 => /boards
+                - tap의 네비게이션의 tapItem의 트립토크 버튼: url.ts에 정의된 게시물 목록 페이지  => /boards
+                - loginButton: url.ts에 정의된 로그인 페이지 => /login
 
-            4) navigation 영역
-                - 일기보관함: url.ts에 정의된 일기목록페이지 => /diaries
-                - 사진보관함: url.ts에 정의된 사진목록페이지 => /pictures
+            4) main 영역
+                4-1) - cardArea 영역: like수가 많은 게시물들로 이동 구현 예정  
+                4-2) - container 영역
+                        - writeButton: url.ts에 정의된 게시물 생성 페이지 => /boards/write
+                        - boardItem: 게시물 상세페이지 구현 예정
+
 
 

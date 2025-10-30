@@ -1,0 +1,505 @@
+/* SelectBox Component Styles */
+/* 피그마 디자인 기반 구현 */
+
+/* ===== BASE STYLES ===== */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.labelContainer {
+  display: flex;
+  align-items: center;
+}
+
+.label {
+  font-family: "Pretendard Variable", -apple-system, BlinkMacSystemFont,
+    system-ui, sans-serif;
+  font-weight: 500;
+  color: var(--color-gray-800, #333333);
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.required {
+  color: var(--color-semantic-red, #f66a6a);
+  font-weight: 700;
+}
+
+.selectContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.select {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid var(--color-gray-300, #c7c7c7);
+  background-color: var(--color-gray-w, #ffffff);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.select:focus {
+  outline: none;
+}
+
+.selectContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 12px;
+  min-height: 40px;
+}
+
+.selectText {
+  font-family: "Pretendard Variable", -apple-system, BlinkMacSystemFont,
+    system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-gray-800, #333333);
+  line-height: 1.4;
+  flex: 1;
+  text-align: left;
+}
+
+.selectText--placeholder {
+  color: var(--color-gray-500, #919191);
+  font-weight: 400;
+}
+
+.selectIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  color: var(--color-gray-500, #919191);
+  transition: transform 0.2s ease;
+}
+
+.selectIcon--open {
+  transform: rotate(180deg);
+}
+
+.list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: var(--color-gray-w, #ffffff);
+  border: 1px solid var(--color-gray-800, #000000);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: all 0.2s ease;
+}
+
+.list--open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  min-height: 40px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid var(--color-gray-100, #e4e4e4);
+}
+
+.option:last-child {
+  border-bottom: none;
+}
+
+.option:hover {
+  background-color: var(--color-gray-50, #f2f2f2);
+}
+
+.optionText {
+  font-family: "Pretendard Variable", -apple-system, BlinkMacSystemFont,
+    system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-gray-700, #5f5f5f);
+  line-height: 1.4;
+  flex: 1;
+  text-align: left;
+}
+
+.optionIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  color: var(--color-primary-main, #2974e5);
+}
+
+.helperContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.errorText {
+  font-family: "Pretendard Variable", -apple-system, BlinkMacSystemFont,
+    system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-semantic-red, #f66a6a);
+  line-height: 1.4;
+}
+
+.helperText {
+  font-family: "Pretendard Variable", -apple-system, BlinkMacSystemFont,
+    system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-gray-500, #919191);
+  line-height: 1.4;
+}
+
+/* ===== VARIANT STYLES ===== */
+
+/* Primary Variant */
+.select--primary {
+  border-color: var(--color-gray-300, #c7c7c7);
+}
+
+.select--primary.select--focused {
+  border-color: var(--color-primary-main, #2974e5);
+  box-shadow: 0 0 0 2px rgba(41, 116, 229, 0.1);
+}
+
+.select--primary.select--filled {
+  border-color: var(--color-gray-800, #000000);
+}
+
+.select--primary.select--filled.select--focused {
+  border-color: var(--color-primary-main, #2974e5);
+  box-shadow: 0 0 0 2px rgba(41, 116, 229, 0.1);
+}
+
+/* Secondary Variant */
+.select--secondary {
+  border-color: var(--color-gray-200, #d4d3d3);
+  background-color: var(--color-gray-50, #f2f2f2);
+}
+
+.select--secondary.select--focused {
+  border-color: var(--color-primary-main, #2974e5);
+  background-color: var(--color-gray-w, #ffffff);
+  box-shadow: 0 0 0 2px rgba(41, 116, 229, 0.1);
+}
+
+.select--secondary.select--filled {
+  border-color: var(--color-gray-400, #ababab);
+  background-color: var(--color-gray-w, #ffffff);
+}
+
+/* Tertiary Variant */
+.select--tertiary {
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid var(--color-gray-300, #c7c7c7);
+  border-radius: 0;
+}
+
+.select--tertiary.select--focused {
+  border-bottom-color: var(--color-primary-main, #2974e5);
+  box-shadow: none;
+}
+
+.select--tertiary.select--filled {
+  border-bottom-color: var(--color-gray-800, #000000);
+}
+
+/* ===== SIZE STYLES ===== */
+
+/* Small Size */
+.select--small {
+  min-height: 32px;
+}
+
+.select--small .selectContent {
+  padding: 0 8px;
+  min-height: 32px;
+}
+
+.select--small .selectText {
+  font-size: 12px;
+}
+
+.select--small .selectIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.select--small .option {
+  min-height: 32px;
+  padding: 0 8px;
+}
+
+.select--small .optionText {
+  font-size: 12px;
+}
+
+.select--small .label {
+  font-size: 12px;
+}
+
+/* Medium Size (Default) */
+.select--medium {
+  min-height: 40px;
+}
+
+.select--medium .selectContent {
+  padding: 0 12px;
+  min-height: 40px;
+}
+
+.select--medium .selectText {
+  font-size: 14px;
+}
+
+.select--medium .selectIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.select--medium .option {
+  min-height: 40px;
+  padding: 0 12px;
+}
+
+.select--medium .optionText {
+  font-size: 14px;
+}
+
+.select--medium .label {
+  font-size: 14px;
+}
+
+/* Large Size */
+.select--large {
+  min-height: 48px;
+}
+
+.select--large .selectContent {
+  padding: 0 16px;
+  min-height: 48px;
+}
+
+.select--large .selectText {
+  font-size: 16px;
+}
+
+.select--large .selectIcon {
+  width: 28px;
+  height: 28px;
+}
+
+.select--large .option {
+  min-height: 48px;
+  padding: 0 16px;
+}
+
+.select--large .optionText {
+  font-size: 16px;
+}
+
+.select--large .label {
+  font-size: 16px;
+}
+
+/* ===== THEME STYLES ===== */
+
+/* Light Theme (Default) */
+.select--light {
+  background-color: var(--color-gray-w, #ffffff);
+  border-color: var(--color-gray-300, #c7c7c7);
+}
+
+.select--light .selectText {
+  color: var(--color-gray-800, #333333);
+}
+
+.select--light .selectText--placeholder {
+  color: var(--color-gray-500, #919191);
+}
+
+.select--light .selectIcon {
+  color: var(--color-gray-500, #919191);
+}
+
+.select--light .list {
+  background-color: var(--color-gray-w, #ffffff);
+  border-color: var(--color-gray-800, #000000);
+}
+
+.select--light .optionText {
+  color: var(--color-gray-700, #5f5f5f);
+}
+
+.select--light .option--selected {
+  background-color: rgba(41, 116, 229, 0.05);
+}
+
+.select--light .option--selected .optionText {
+  color: var(--color-primary-main, #2974e5);
+  font-weight: 700;
+}
+
+.select--light .label {
+  color: var(--color-gray-800, #333333);
+}
+
+/* Dark Theme */
+.select--dark {
+  background-color: var(--color-gray-900, #1c1c1c);
+  border-color: var(--color-gray-600, #777777);
+}
+
+.select--dark .selectText {
+  color: var(--color-gray-100, #e4e4e4);
+}
+
+.select--dark .selectText--placeholder {
+  color: var(--color-gray-400, #ababab);
+}
+
+.select--dark .selectIcon {
+  color: var(--color-gray-400, #ababab);
+}
+
+.select--dark .list {
+  background-color: var(--color-gray-900, #1c1c1c);
+  border-color: var(--color-gray-600, #777777);
+}
+
+.select--dark .option {
+  border-bottom-color: var(--color-gray-800, #333333);
+}
+
+.select--dark .optionText {
+  color: var(--color-gray-200, #d4d3d3);
+}
+
+.select--dark .option--selected {
+  background-color: rgba(41, 116, 229, 0.1);
+}
+
+.select--dark .option--selected .optionText {
+  color: var(--color-primary-main, #4a90e2);
+  font-weight: 700;
+}
+
+.select--dark .label {
+  color: var(--color-gray-100, #e4e4e4);
+}
+
+/* ===== STATE STYLES ===== */
+
+/* Error State */
+.select--error {
+  border-color: var(--color-semantic-red, #f66a6a);
+}
+
+.select--error.select--focused {
+  border-color: var(--color-semantic-red, #f66a6a);
+  box-shadow: 0 0 0 2px rgba(246, 106, 106, 0.1);
+}
+
+/* Disabled State */
+.select--disabled {
+  background-color: var(--color-gray-100, #e4e4e4);
+  border-color: var(--color-gray-200, #d4d3d3);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.select--disabled .selectText {
+  color: var(--color-gray-400, #ababab);
+}
+
+.select--disabled .selectIcon {
+  color: var(--color-gray-400, #ababab);
+}
+
+.select--disabled .option {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.select--disabled .optionText {
+  color: var(--color-gray-400, #ababab);
+}
+
+/* Filled State */
+.select--filled .selectText {
+  color: var(--color-gray-800, #333333);
+  font-weight: 500;
+}
+
+.select--filled .selectText--placeholder {
+  color: var(--color-gray-800, #333333);
+  font-weight: 500;
+}
+
+/* Dark theme filled state */
+.select--dark.select--filled .selectText {
+  color: var(--color-gray-100, #e4e4e4);
+  font-weight: 500;
+}
+
+.select--dark.select--filled .selectText--placeholder {
+  color: var(--color-gray-100, #e4e4e4);
+  font-weight: 500;
+}
+
+/* ===== ACCESSIBILITY ===== */
+.select:focus-visible {
+  outline: 2px solid var(--color-primary-main, #2974e5);
+  outline-offset: 2px;
+}
+
+.option:focus-visible {
+  outline: 2px solid var(--color-primary-main, #2974e5);
+  outline-offset: -2px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .list {
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 16px 16px 0 0;
+    max-height: 50vh;
+    overflow-y: auto;
+  }
+
+  .list--open {
+    transform: translateY(0);
+  }
+}

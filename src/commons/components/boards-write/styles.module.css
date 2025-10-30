@@ -1,0 +1,313 @@
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: var(--typography-b_20_28-font-size-desktop);
+  line-height: var(--typography-b_20_28-line-height-desktop);
+  font-weight: var(--typography-b_20_28-font-weight);
+  font-family: var(--typography-b_20_28-font-family);
+  color: var(--color-gray-B);
+  margin-bottom: 40px;
+}
+
+.formContainer {
+  background: var(--color-gray-w);
+}
+
+/* 작성자 & 비밀번호 */
+.rowInputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-gray-100);
+  margin: 40px 0;
+}
+
+/* 내용 영역 */
+.contentSection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+
+.labelContainer {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.label {
+  font-size: var(--typography-me_16_24-font-size-desktop);
+  line-height: var(--typography-me_16_24-line-height-desktop);
+  font-weight: var(--typography-me_16_24-font-weight);
+  font-family: var(--typography-me_16_24-font-family);
+  color: var(--color-gray-800);
+}
+
+.required {
+  font-size: var(--typography-me_16_24-font-size-desktop);
+  line-height: var(--typography-me_16_24-line-height-desktop);
+  font-weight: var(--typography-me_16_24-font-weight);
+  font-family: var(--typography-me_16_24-font-family);
+  color: var(--color-semantic-red);
+}
+
+.textarea {
+  width: 100%;
+  min-height: 336px;
+  padding: 12px 16px;
+  border: 1px solid var(--color-gray-200);
+  border-radius: 8px;
+  background-color: var(--color-gray-w);
+  font-size: var(--typography-r_16_24-font-size-desktop);
+  line-height: var(--typography-r_16_24-line-height-desktop);
+  font-weight: var(--typography-r_16_24-font-weight);
+  font-family: var(--typography-r_16_24-font-family);
+  color: var(--color-gray-B);
+  resize: none;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.textarea::placeholder {
+  color: var(--color-gray-400);
+}
+
+.textarea:focus {
+  border-color: var(--color-primary-main);
+}
+
+.error {
+  font-size: var(--typography-r_14_20-font-size-desktop);
+  line-height: var(--typography-r_14_20-line-height-desktop);
+  font-weight: var(--typography-r_14_20-font-weight);
+  font-family: var(--typography-r_14_20-font-family);
+  color: var(--color-semantic-red);
+}
+
+/* 주소 영역 */
+.addressSection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+
+.zipcodeContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.zipcodeRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.zipcodeInput {
+  width: 82px;
+  height: 48px;
+  padding: 12px 16px;
+  border: 1px solid var(--color-gray-200);
+  border-radius: 8px;
+  background-color: var(--color-gray-w);
+  font-size: var(--typography-r_16_24-font-size-desktop);
+  line-height: var(--typography-r_16_24-line-height-desktop);
+  font-weight: var(--typography-r_16_24-font-weight);
+  font-family: var(--typography-r_16_24-font-family);
+  color: var(--color-gray-B);
+  outline: none;
+  flex-shrink: 0;
+}
+
+.zipcodeInput::placeholder {
+  color: var(--color-gray-400);
+}
+
+.zipcodeButton {
+  width: 130px;
+  height: 48px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+/* 사진 첨부 영역 */
+.imageSection {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.imageBoxes {
+  display: flex;
+  gap: 16px;
+}
+
+.imageBox {
+  width: 160px;
+  height: 160px;
+  background-color: var(--color-gray-50);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.imageBox:hover {
+  background-color: var(--color-gray-100);
+}
+
+.addIcon {
+  width: 40px;
+  height: 40px;
+}
+
+.uploadText {
+  font-size: var(--typography-r_16_24-font-size-desktop);
+  line-height: var(--typography-r_16_24-line-height-desktop);
+  font-weight: var(--typography-r_16_24-font-weight);
+  font-family: var(--typography-r_16_24-font-family);
+  color: var(--color-gray-600);
+}
+
+.previewImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 하단 버튼 영역 */
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 48px;
+}
+
+/* 수정 페이지 disabled input 스타일 */
+.rowInputs input:disabled {
+  background-color: var(--color-gray-50);
+  color: var(--color-gray-B);
+  font-weight: 400;
+}
+
+.rowInputs input[type="password"]:disabled {
+  color: var(--color-gray-B);
+  letter-spacing: 2px;
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+  .container {
+    padding: 40px 16px;
+  }
+
+  .title {
+    font-size: var(--typography-b_20_28-font-size-mobile);
+    line-height: var(--typography-b_20_28-line-height-mobile);
+    margin-bottom: 24px;
+  }
+
+  .formContainer {
+    padding: 24px 0;
+  }
+
+  .rowInputs {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .divider {
+    margin: 24px 0;
+  }
+
+  .contentSection {
+    margin-bottom: 24px;
+  }
+
+  .label {
+    font-size: var(--typography-me_16_24-font-size-mobile);
+    line-height: var(--typography-me_16_24-line-height-mobile);
+  }
+
+  .required {
+    font-size: var(--typography-me_16_24-font-size-mobile);
+    line-height: var(--typography-me_16_24-line-height-mobile);
+  }
+
+  .textarea {
+    min-height: 200px;
+    font-size: var(--typography-r_16_24-font-size-mobile);
+    line-height: var(--typography-r_16_24-line-height-mobile);
+  }
+
+  .error {
+    font-size: var(--typography-r_14_20-font-size-mobile);
+    line-height: var(--typography-r_14_20-line-height-mobile);
+  }
+
+  .addressSection {
+    margin-bottom: 24px;
+  }
+
+  .zipcodeRow {
+    flex-wrap: wrap;
+  }
+
+  .zipcodeInput {
+    width: 100%;
+    font-size: var(--typography-r_16_24-font-size-mobile);
+    line-height: var(--typography-r_16_24-line-height-mobile);
+  }
+
+  .zipcodeButton {
+    width: 100%;
+  }
+
+  .imageBoxes {
+    flex-wrap: wrap;
+  }
+
+  .imageBox {
+    width: calc(50% - 8px);
+    height: 120px;
+  }
+
+  .addIcon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .uploadText {
+    font-size: var(--typography-r_16_24-font-size-mobile);
+    line-height: var(--typography-r_16_24-line-height-mobile);
+  }
+
+  .buttonContainer {
+    flex-direction: column-reverse;
+    gap: 12px;
+    margin-top: 24px;
+  }
+
+  .buttonContainer button {
+    width: 100%;
+  }
+}

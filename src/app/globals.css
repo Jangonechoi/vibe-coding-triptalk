@@ -23,6 +23,186 @@
   --color-primary-main: #2974e5;
 
   --color-semantic-red: #f66a6a;
+
+  /* Typography Tokens */
+  --font-family-korean: "Pretendard Variable", -apple-system, BlinkMacSystemFont,
+    system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo",
+    "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", sans-serif;
+  --font-family-korean-fallback: "Pretendard", -apple-system, BlinkMacSystemFont,
+    system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo",
+    "Noto Sans KR", "Malgun Gothic", sans-serif;
+  --font-family-english: "Inter", -apple-system, BlinkMacSystemFont, system-ui,
+    Roboto, "Helvetica Neue", "Segoe UI", sans-serif;
+  --font-family-english-fallback: system-ui, -apple-system, BlinkMacSystemFont,
+    Roboto, "Helvetica Neue", "Segoe UI", sans-serif;
+
+  /* Font Weights */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Typography Scale - Bold */
+  --typography-b_28_36-font-size-mobile: 24px;
+  --typography-b_28_36-font-size-desktop: 28px;
+  --typography-b_28_36-line-height-mobile: 32px;
+  --typography-b_28_36-line-height-desktop: 36px;
+  --typography-b_28_36-font-weight: 700;
+  --typography-b_28_36-font-family: var(--font-family-korean);
+
+  --typography-b_24_32-font-size-mobile: 20px;
+  --typography-b_24_32-font-size-desktop: 24px;
+  --typography-b_24_32-line-height-mobile: 28px;
+  --typography-b_24_32-line-height-desktop: 32px;
+  --typography-b_24_32-font-weight: 700;
+  --typography-b_24_32-font-family: var(--font-family-korean);
+
+  --typography-b_20_28-font-size-mobile: 18px;
+  --typography-b_20_28-font-size-desktop: 20px;
+  --typography-b_20_28-line-height-mobile: 24px;
+  --typography-b_20_28-line-height-desktop: 28px;
+  --typography-b_20_28-font-weight: 700;
+  --typography-b_20_28-font-family: var(--font-family-korean);
+
+  --typography-b_16_24-font-size-mobile: 14px;
+  --typography-b_16_24-font-size-desktop: 16px;
+  --typography-b_16_24-line-height-mobile: 20px;
+  --typography-b_16_24-line-height-desktop: 24px;
+  --typography-b_16_24-font-weight: 700;
+  --typography-b_16_24-font-family: var(--font-family-korean);
+
+  --typography-B_14_20-font-size-mobile: 12px;
+  --typography-B_14_20-font-size-desktop: 14px;
+  --typography-B_14_20-line-height-mobile: 16px;
+  --typography-B_14_20-line-height-desktop: 20px;
+  --typography-B_14_20-font-weight: 700;
+  --typography-B_14_20-font-family: var(--font-family-korean);
+
+  /* Typography Scale - SemiBold */
+  --typography-sb_18_24-font-size-mobile: 16px;
+  --typography-sb_18_24-font-size-desktop: 18px;
+  --typography-sb_18_24-line-height-mobile: 20px;
+  --typography-sb_18_24-line-height-desktop: 24px;
+  --typography-sb_18_24-font-weight: 600;
+  --typography-sb_18_24-font-family: var(--font-family-korean);
+
+  --typography-sb_16_24-font-size-mobile: 14px;
+  --typography-sb_16_24-font-size-desktop: 16px;
+  --typography-sb_16_24-line-height-mobile: 20px;
+  --typography-sb_16_24-line-height-desktop: 24px;
+  --typography-sb_16_24-font-weight: 600;
+  --typography-sb_16_24-font-family: var(--font-family-korean);
+
+  --typography-sb_14_20-font-size-mobile: 12px;
+  --typography-sb_14_20-font-size-desktop: 14px;
+  --typography-sb_14_20-line-height-mobile: 16px;
+  --typography-sb_14_20-line-height-desktop: 20px;
+  --typography-sb_14_20-font-weight: 600;
+  --typography-sb_14_20-font-family: var(--font-family-korean);
+
+  /* Typography Scale - Medium */
+  --typography-me_20_24-font-size-mobile: 18px;
+  --typography-me_20_24-font-size-desktop: 20px;
+  --typography-me_20_24-line-height-mobile: 20px;
+  --typography-me_20_24-line-height-desktop: 24px;
+  --typography-me_20_24-font-weight: 500;
+  --typography-me_20_24-font-family: var(--font-family-korean);
+
+  --typography-me_16_24-font-size-mobile: 14px;
+  --typography-me_16_24-font-size-desktop: 16px;
+  --typography-me_16_24-line-height-mobile: 20px;
+  --typography-me_16_24-line-height-desktop: 24px;
+  --typography-me_16_24-font-weight: 500;
+  --typography-me_16_24-font-family: var(--font-family-korean);
+
+  --typography-me_16_20-font-size-mobile: 14px;
+  --typography-me_16_20-font-size-desktop: 16px;
+  --typography-me_16_20-line-height-mobile: 16px;
+  --typography-me_16_20-line-height-desktop: 20px;
+  --typography-me_16_20-font-weight: 500;
+  --typography-me_16_20-font-family: var(--font-family-korean);
+
+  --typography-me_14_20-font-size-mobile: 12px;
+  --typography-me_14_20-font-size-desktop: 14px;
+  --typography-me_14_20-line-height-mobile: 16px;
+  --typography-me_14_20-line-height-desktop: 20px;
+  --typography-me_14_20-font-weight: 500;
+  --typography-me_14_20-font-family: var(--font-family-korean);
+
+  --typography-me_13_20-font-size-mobile: 11px;
+  --typography-me_13_20-font-size-desktop: 13px;
+  --typography-me_13_20-line-height-mobile: 16px;
+  --typography-me_13_20-line-height-desktop: 20px;
+  --typography-me_13_20-font-weight: 500;
+  --typography-me_13_20-font-family: var(--font-family-korean);
+
+  --typography-me_11_12-font-size-mobile: 10px;
+  --typography-me_11_12-font-size-desktop: 11px;
+  --typography-me_11_12-line-height-mobile: 10px;
+  --typography-me_11_12-line-height-desktop: 12px;
+  --typography-me_11_12-font-weight: 500;
+  --typography-me_11_12-font-family: var(--font-family-korean);
+
+  /* Typography Scale - Regular */
+  --typography-r_20_24-font-size-mobile: 18px;
+  --typography-r_20_24-font-size-desktop: 20px;
+  --typography-r_20_24-line-height-mobile: 20px;
+  --typography-r_20_24-line-height-desktop: 24px;
+  --typography-r_20_24-font-weight: 400;
+  --typography-r_20_24-font-family: var(--font-family-korean);
+
+  --typography-r_16_24-font-size-mobile: 14px;
+  --typography-r_16_24-font-size-desktop: 16px;
+  --typography-r_16_24-line-height-mobile: 20px;
+  --typography-r_16_24-line-height-desktop: 24px;
+  --typography-r_16_24-font-weight: 400;
+  --typography-r_16_24-font-family: var(--font-family-korean);
+
+  --typography-r_14_20-font-size-mobile: 12px;
+  --typography-r_14_20-font-size-desktop: 14px;
+  --typography-r_14_20-line-height-mobile: 16px;
+  --typography-r_14_20-line-height-desktop: 20px;
+  --typography-r_14_20-font-weight: 400;
+  --typography-r_14_20-font-family: var(--font-family-korean);
+
+  --typography-r_12_20-font-size-mobile: 10px;
+  --typography-r_12_20-font-size-desktop: 12px;
+  --typography-r_12_20-line-height-mobile: 16px;
+  --typography-r_12_20-line-height-desktop: 20px;
+  --typography-r_12_20-font-weight: 400;
+  --typography-r_12_20-font-family: var(--font-family-korean);
+
+  --typography-r_11_12-font-size-mobile: 10px;
+  --typography-r_11_12-font-size-desktop: 11px;
+  --typography-r_11_12-line-height-mobile: 10px;
+  --typography-r_11_12-line-height-desktop: 12px;
+  --typography-r_11_12-font-weight: 400;
+  --typography-r_11_12-font-family: var(--font-family-korean);
+
+  /* Typography Scale - Light */
+  --typography-l_14_20-font-size-mobile: 12px;
+  --typography-l_14_20-font-size-desktop: 14px;
+  --typography-l_14_20-line-height-mobile: 16px;
+  --typography-l_14_20-line-height-desktop: 20px;
+  --typography-l_14_20-font-weight: 300;
+  --typography-l_14_20-font-family: var(--font-family-korean);
+
+  --typography-l_12_20-font-size-mobile: 10px;
+  --typography-l_12_20-font-size-desktop: 12px;
+  --typography-l_12_20-line-height-mobile: 16px;
+  --typography-l_12_20-line-height-desktop: 20px;
+  --typography-l_12_20-font-weight: 300;
+  --typography-l_12_20-font-family: var(--font-family-korean);
+
+  /* Typography Scale - Medium 12px */
+  --typography-me_12_20-font-size-mobile: 10px;
+  --typography-me_12_20-font-size-desktop: 12px;
+  --typography-me_12_20-line-height-mobile: 16px;
+  --typography-me_12_20-line-height-desktop: 20px;
+  --typography-me_12_20-font-weight: 500;
+  --typography-me_12_20-font-family: var(--font-family-korean);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -47,17 +227,460 @@
     --color-primary-main: #4a90e2;
 
     --color-semantic-red: #ff6b6b;
+
+    /* Typography Tokens - Dark Mode (same as light mode) */
+    --font-family-korean: "Pretendard Variable", -apple-system,
+      BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+      "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic",
+      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    --font-family-korean-fallback: "Pretendard", -apple-system,
+      BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+      "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+    --font-family-english: "Inter", -apple-system, BlinkMacSystemFont, system-ui,
+      Roboto, "Helvetica Neue", "Segoe UI", sans-serif;
+    --font-family-english-fallback: system-ui, -apple-system, BlinkMacSystemFont,
+      Roboto, "Helvetica Neue", "Segoe UI", sans-serif;
+
+    /* Font Weights */
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /* Typography Scale - Dark Mode (same as light mode) */
+    --typography-b_28_36-font-size-mobile: 24px;
+    --typography-b_28_36-font-size-desktop: 28px;
+    --typography-b_28_36-line-height-mobile: 32px;
+    --typography-b_28_36-line-height-desktop: 36px;
+    --typography-b_28_36-font-weight: 700;
+    --typography-b_28_36-font-family: var(--font-family-korean);
+
+    --typography-b_24_32-font-size-mobile: 20px;
+    --typography-b_24_32-font-size-desktop: 24px;
+    --typography-b_24_32-line-height-mobile: 28px;
+    --typography-b_24_32-line-height-desktop: 32px;
+    --typography-b_24_32-font-weight: 700;
+    --typography-b_24_32-font-family: var(--font-family-korean);
+
+    --typography-b_20_28-font-size-mobile: 18px;
+    --typography-b_20_28-font-size-desktop: 20px;
+    --typography-b_20_28-line-height-mobile: 24px;
+    --typography-b_20_28-line-height-desktop: 28px;
+    --typography-b_20_28-font-weight: 700;
+    --typography-b_20_28-font-family: var(--font-family-korean);
+
+    --typography-b_16_24-font-size-mobile: 14px;
+    --typography-b_16_24-font-size-desktop: 16px;
+    --typography-b_16_24-line-height-mobile: 20px;
+    --typography-b_16_24-line-height-desktop: 24px;
+    --typography-b_16_24-font-weight: 700;
+    --typography-b_16_24-font-family: var(--font-family-korean);
+
+    --typography-B_14_20-font-size-mobile: 12px;
+    --typography-B_14_20-font-size-desktop: 14px;
+    --typography-B_14_20-line-height-mobile: 16px;
+    --typography-B_14_20-line-height-desktop: 20px;
+    --typography-B_14_20-font-weight: 700;
+    --typography-B_14_20-font-family: var(--font-family-korean);
+
+    --typography-sb_18_24-font-size-mobile: 16px;
+    --typography-sb_18_24-font-size-desktop: 18px;
+    --typography-sb_18_24-line-height-mobile: 20px;
+    --typography-sb_18_24-line-height-desktop: 24px;
+    --typography-sb_18_24-font-weight: 600;
+    --typography-sb_18_24-font-family: var(--font-family-korean);
+
+    --typography-sb_16_24-font-size-mobile: 14px;
+    --typography-sb_16_24-font-size-desktop: 16px;
+    --typography-sb_16_24-line-height-mobile: 20px;
+    --typography-sb_16_24-line-height-desktop: 24px;
+    --typography-sb_16_24-font-weight: 600;
+    --typography-sb_16_24-font-family: var(--font-family-korean);
+
+    --typography-sb_14_20-font-size-mobile: 12px;
+    --typography-sb_14_20-font-size-desktop: 14px;
+    --typography-sb_14_20-line-height-mobile: 16px;
+    --typography-sb_14_20-line-height-desktop: 20px;
+    --typography-sb_14_20-font-weight: 600;
+    --typography-sb_14_20-font-family: var(--font-family-korean);
+
+    --typography-me_20_24-font-size-mobile: 18px;
+    --typography-me_20_24-font-size-desktop: 20px;
+    --typography-me_20_24-line-height-mobile: 20px;
+    --typography-me_20_24-line-height-desktop: 24px;
+    --typography-me_20_24-font-weight: 500;
+    --typography-me_20_24-font-family: var(--font-family-korean);
+
+    --typography-me_16_24-font-size-mobile: 14px;
+    --typography-me_16_24-font-size-desktop: 16px;
+    --typography-me_16_24-line-height-mobile: 20px;
+    --typography-me_16_24-line-height-desktop: 24px;
+    --typography-me_16_24-font-weight: 500;
+    --typography-me_16_24-font-family: var(--font-family-korean);
+
+    --typography-me_16_20-font-size-mobile: 14px;
+    --typography-me_16_20-font-size-desktop: 16px;
+    --typography-me_16_20-line-height-mobile: 16px;
+    --typography-me_16_20-line-height-desktop: 20px;
+    --typography-me_16_20-font-weight: 500;
+    --typography-me_16_20-font-family: var(--font-family-korean);
+
+    --typography-me_14_20-font-size-mobile: 12px;
+    --typography-me_14_20-font-size-desktop: 14px;
+    --typography-me_14_20-line-height-mobile: 16px;
+    --typography-me_14_20-line-height-desktop: 20px;
+    --typography-me_14_20-font-weight: 500;
+    --typography-me_14_20-font-family: var(--font-family-korean);
+
+    --typography-me_13_20-font-size-mobile: 11px;
+    --typography-me_13_20-font-size-desktop: 13px;
+    --typography-me_13_20-line-height-mobile: 16px;
+    --typography-me_13_20-line-height-desktop: 20px;
+    --typography-me_13_20-font-weight: 500;
+    --typography-me_13_20-font-family: var(--font-family-korean);
+
+    --typography-me_11_12-font-size-mobile: 10px;
+    --typography-me_11_12-font-size-desktop: 11px;
+    --typography-me_11_12-line-height-mobile: 10px;
+    --typography-me_11_12-line-height-desktop: 12px;
+    --typography-me_11_12-font-weight: 500;
+    --typography-me_11_12-font-family: var(--font-family-korean);
+
+    --typography-r_20_24-font-size-mobile: 18px;
+    --typography-r_20_24-font-size-desktop: 20px;
+    --typography-r_20_24-line-height-mobile: 20px;
+    --typography-r_20_24-line-height-desktop: 24px;
+    --typography-r_20_24-font-weight: 400;
+    --typography-r_20_24-font-family: var(--font-family-korean);
+
+    --typography-r_16_24-font-size-mobile: 14px;
+    --typography-r_16_24-font-size-desktop: 16px;
+    --typography-r_16_24-line-height-mobile: 20px;
+    --typography-r_16_24-line-height-desktop: 24px;
+    --typography-r_16_24-font-weight: 400;
+    --typography-r_16_24-font-family: var(--font-family-korean);
+
+    --typography-r_14_20-font-size-mobile: 12px;
+    --typography-r_14_20-font-size-desktop: 14px;
+    --typography-r_14_20-line-height-mobile: 16px;
+    --typography-r_14_20-line-height-desktop: 20px;
+    --typography-r_14_20-font-weight: 400;
+    --typography-r_14_20-font-family: var(--font-family-korean);
+
+    --typography-r_12_20-font-size-mobile: 10px;
+    --typography-r_12_20-font-size-desktop: 12px;
+    --typography-r_12_20-line-height-mobile: 16px;
+    --typography-r_12_20-line-height-desktop: 20px;
+    --typography-r_12_20-font-weight: 400;
+    --typography-r_12_20-font-family: var(--font-family-korean);
+
+    --typography-r_11_12-font-size-mobile: 10px;
+    --typography-r_11_12-font-size-desktop: 11px;
+    --typography-r_11_12-line-height-mobile: 10px;
+    --typography-r_11_12-line-height-desktop: 12px;
+    --typography-r_11_12-font-weight: 400;
+    --typography-r_11_12-font-family: var(--font-family-korean);
+
+    --typography-l_14_20-font-size-mobile: 12px;
+    --typography-l_14_20-font-size-desktop: 14px;
+    --typography-l_14_20-line-height-mobile: 16px;
+    --typography-l_14_20-line-height-desktop: 20px;
+    --typography-l_14_20-font-weight: 300;
+    --typography-l_14_20-font-family: var(--font-family-korean);
+
+    --typography-l_12_20-font-size-mobile: 10px;
+    --typography-l_12_20-font-size-desktop: 12px;
+    --typography-l_12_20-line-height-mobile: 16px;
+    --typography-l_12_20-line-height-desktop: 20px;
+    --typography-l_12_20-font-weight: 300;
+    --typography-l_12_20-font-family: var(--font-family-korean);
+
+    --typography-me_12_20-font-size-mobile: 10px;
+    --typography-me_12_20-font-size-desktop: 12px;
+    --typography-me_12_20-line-height-mobile: 16px;
+    --typography-me_12_20-line-height-desktop: 20px;
+    --typography-me_12_20-font-weight: 500;
+    --typography-me_12_20-font-family: var(--font-family-korean);
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-family-korean);
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  /* Typography Utility Classes */
+  .text-b_28_36 {
+    font-size: var(--typography-b_28_36-font-size-mobile);
+    line-height: var(--typography-b_28_36-line-height-mobile);
+    font-weight: var(--typography-b_28_36-font-weight);
+    font-family: var(--typography-b_28_36-font-family);
+  }
+
+  .text-b_24_32 {
+    font-size: var(--typography-b_24_32-font-size-mobile);
+    line-height: var(--typography-b_24_32-line-height-mobile);
+    font-weight: var(--typography-b_24_32-font-weight);
+    font-family: var(--typography-b_24_32-font-family);
+  }
+
+  .text-b_20_28 {
+    font-size: var(--typography-b_20_28-font-size-mobile);
+    line-height: var(--typography-b_20_28-line-height-mobile);
+    font-weight: var(--typography-b_20_28-font-weight);
+    font-family: var(--typography-b_20_28-font-family);
+  }
+
+  .text-b_16_24 {
+    font-size: var(--typography-b_16_24-font-size-mobile);
+    line-height: var(--typography-b_16_24-line-height-mobile);
+    font-weight: var(--typography-b_16_24-font-weight);
+    font-family: var(--typography-b_16_24-font-family);
+  }
+
+  .text-B_14_20 {
+    font-size: var(--typography-B_14_20-font-size-mobile);
+    line-height: var(--typography-B_14_20-line-height-mobile);
+    font-weight: var(--typography-B_14_20-font-weight);
+    font-family: var(--typography-B_14_20-font-family);
+  }
+
+  .text-sb_18_24 {
+    font-size: var(--typography-sb_18_24-font-size-mobile);
+    line-height: var(--typography-sb_18_24-line-height-mobile);
+    font-weight: var(--typography-sb_18_24-font-weight);
+    font-family: var(--typography-sb_18_24-font-family);
+  }
+
+  .text-sb_16_24 {
+    font-size: var(--typography-sb_16_24-font-size-mobile);
+    line-height: var(--typography-sb_16_24-line-height-mobile);
+    font-weight: var(--typography-sb_16_24-font-weight);
+    font-family: var(--typography-sb_16_24-font-family);
+  }
+
+  .text-sb_14_20 {
+    font-size: var(--typography-sb_14_20-font-size-mobile);
+    line-height: var(--typography-sb_14_20-line-height-mobile);
+    font-weight: var(--typography-sb_14_20-font-weight);
+    font-family: var(--typography-sb_14_20-font-family);
+  }
+
+  .text-me_20_24 {
+    font-size: var(--typography-me_20_24-font-size-mobile);
+    line-height: var(--typography-me_20_24-line-height-mobile);
+    font-weight: var(--typography-me_20_24-font-weight);
+    font-family: var(--typography-me_20_24-font-family);
+  }
+
+  .text-me_16_24 {
+    font-size: var(--typography-me_16_24-font-size-mobile);
+    line-height: var(--typography-me_16_24-line-height-mobile);
+    font-weight: var(--typography-me_16_24-font-weight);
+    font-family: var(--typography-me_16_24-font-family);
+  }
+
+  .text-me_16_20 {
+    font-size: var(--typography-me_16_20-font-size-mobile);
+    line-height: var(--typography-me_16_20-line-height-mobile);
+    font-weight: var(--typography-me_16_20-font-weight);
+    font-family: var(--typography-me_16_20-font-family);
+  }
+
+  .text-me_14_20 {
+    font-size: var(--typography-me_14_20-font-size-mobile);
+    line-height: var(--typography-me_14_20-line-height-mobile);
+    font-weight: var(--typography-me_14_20-font-weight);
+    font-family: var(--typography-me_14_20-font-family);
+  }
+
+  .text-me_13_20 {
+    font-size: var(--typography-me_13_20-font-size-mobile);
+    line-height: var(--typography-me_13_20-line-height-mobile);
+    font-weight: var(--typography-me_13_20-font-weight);
+    font-family: var(--typography-me_13_20-font-family);
+  }
+
+  .text-me_11_12 {
+    font-size: var(--typography-me_11_12-font-size-mobile);
+    line-height: var(--typography-me_11_12-line-height-mobile);
+    font-weight: var(--typography-me_11_12-font-weight);
+    font-family: var(--typography-me_11_12-font-family);
+  }
+
+  .text-r_20_24 {
+    font-size: var(--typography-r_20_24-font-size-mobile);
+    line-height: var(--typography-r_20_24-line-height-mobile);
+    font-weight: var(--typography-r_20_24-font-weight);
+    font-family: var(--typography-r_20_24-font-family);
+  }
+
+  .text-r_16_24 {
+    font-size: var(--typography-r_16_24-font-size-mobile);
+    line-height: var(--typography-r_16_24-line-height-mobile);
+    font-weight: var(--typography-r_16_24-font-weight);
+    font-family: var(--typography-r_16_24-font-family);
+  }
+
+  .text-r_14_20 {
+    font-size: var(--typography-r_14_20-font-size-mobile);
+    line-height: var(--typography-r_14_20-line-height-mobile);
+    font-weight: var(--typography-r_14_20-font-weight);
+    font-family: var(--typography-r_14_20-font-family);
+  }
+
+  .text-r_12_20 {
+    font-size: var(--typography-r_12_20-font-size-mobile);
+    line-height: var(--typography-r_12_20-line-height-mobile);
+    font-weight: var(--typography-r_12_20-font-weight);
+    font-family: var(--typography-r_12_20-font-family);
+  }
+
+  .text-r_11_12 {
+    font-size: var(--typography-r_11_12-font-size-mobile);
+    line-height: var(--typography-r_11_12-line-height-mobile);
+    font-weight: var(--typography-r_11_12-font-weight);
+    font-family: var(--typography-r_11_12-font-family);
+  }
+
+  .text-l_14_20 {
+    font-size: var(--typography-l_14_20-font-size-mobile);
+    line-height: var(--typography-l_14_20-line-height-mobile);
+    font-weight: var(--typography-l_14_20-font-weight);
+    font-family: var(--typography-l_14_20-font-family);
+  }
+
+  .text-l_12_20 {
+    font-size: var(--typography-l_12_20-font-size-mobile);
+    line-height: var(--typography-l_12_20-line-height-mobile);
+    font-weight: var(--typography-l_12_20-font-weight);
+    font-family: var(--typography-l_12_20-font-family);
+  }
+
+  .text-me_12_20 {
+    font-size: var(--typography-me_12_20-font-size-mobile);
+    line-height: var(--typography-me_12_20-line-height-mobile);
+    font-weight: var(--typography-me_12_20-font-weight);
+    font-family: var(--typography-me_12_20-font-family);
+  }
+
+  /* Desktop Typography */
+  @media (min-width: 768px) {
+    .text-b_28_36 {
+      font-size: var(--typography-b_28_36-font-size-desktop);
+      line-height: var(--typography-b_28_36-line-height-desktop);
+    }
+
+    .text-b_24_32 {
+      font-size: var(--typography-b_24_32-font-size-desktop);
+      line-height: var(--typography-b_24_32-line-height-desktop);
+    }
+
+    .text-b_20_28 {
+      font-size: var(--typography-b_20_28-font-size-desktop);
+      line-height: var(--typography-b_20_28-line-height-desktop);
+    }
+
+    .text-b_16_24 {
+      font-size: var(--typography-b_16_24-font-size-desktop);
+      line-height: var(--typography-b_16_24-line-height-desktop);
+    }
+
+    .text-B_14_20 {
+      font-size: var(--typography-B_14_20-font-size-desktop);
+      line-height: var(--typography-B_14_20-line-height-desktop);
+    }
+
+    .text-sb_18_24 {
+      font-size: var(--typography-sb_18_24-font-size-desktop);
+      line-height: var(--typography-sb_18_24-line-height-desktop);
+    }
+
+    .text-sb_16_24 {
+      font-size: var(--typography-sb_16_24-font-size-desktop);
+      line-height: var(--typography-sb_16_24-line-height-desktop);
+    }
+
+    .text-sb_14_20 {
+      font-size: var(--typography-sb_14_20-font-size-desktop);
+      line-height: var(--typography-sb_14_20-line-height-desktop);
+    }
+
+    .text-me_20_24 {
+      font-size: var(--typography-me_20_24-font-size-desktop);
+      line-height: var(--typography-me_20_24-line-height-desktop);
+    }
+
+    .text-me_16_24 {
+      font-size: var(--typography-me_16_24-font-size-desktop);
+      line-height: var(--typography-me_16_24-line-height-desktop);
+    }
+
+    .text-me_16_20 {
+      font-size: var(--typography-me_16_20-font-size-desktop);
+      line-height: var(--typography-me_16_20-line-height-desktop);
+    }
+
+    .text-me_14_20 {
+      font-size: var(--typography-me_14_20-font-size-desktop);
+      line-height: var(--typography-me_14_20-line-height-desktop);
+    }
+
+    .text-me_13_20 {
+      font-size: var(--typography-me_13_20-font-size-desktop);
+      line-height: var(--typography-me_13_20-line-height-desktop);
+    }
+
+    .text-me_11_12 {
+      font-size: var(--typography-me_11_12-font-size-desktop);
+      line-height: var(--typography-me_11_12-line-height-desktop);
+    }
+
+    .text-r_20_24 {
+      font-size: var(--typography-r_20_24-font-size-desktop);
+      line-height: var(--typography-r_20_24-line-height-desktop);
+    }
+
+    .text-r_16_24 {
+      font-size: var(--typography-r_16_24-font-size-desktop);
+      line-height: var(--typography-r_16_24-line-height-desktop);
+    }
+
+    .text-r_14_20 {
+      font-size: var(--typography-r_14_20-font-size-desktop);
+      line-height: var(--typography-r_14_20-line-height-desktop);
+    }
+
+    .text-r_12_20 {
+      font-size: var(--typography-r_12_20-font-size-desktop);
+      line-height: var(--typography-r_12_20-line-height-desktop);
+    }
+
+    .text-r_11_12 {
+      font-size: var(--typography-r_11_12-font-size-desktop);
+      line-height: var(--typography-r_11_12-line-height-desktop);
+    }
+
+    .text-l_14_20 {
+      font-size: var(--typography-l_14_20-font-size-desktop);
+      line-height: var(--typography-l_14_20-line-height-desktop);
+    }
+
+    .text-l_12_20 {
+      font-size: var(--typography-l_12_20-font-size-desktop);
+      line-height: var(--typography-l_12_20-line-height-desktop);
+    }
+
+    .text-me_12_20 {
+      font-size: var(--typography-me_12_20-font-size-desktop);
+      line-height: var(--typography-me_12_20-line-height-desktop);
+    }
   }
 }

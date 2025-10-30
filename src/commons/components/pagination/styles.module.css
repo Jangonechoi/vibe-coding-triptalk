@@ -1,0 +1,264 @@
+/* Pagination Container */
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Pretendard Variable", -apple-system, BlinkMacSystemFont,
+    system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo",
+    "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", sans-serif;
+}
+
+/* Pagination Pages Container */
+.paginationPages {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Base Button Styles */
+.paginationButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 8px;
+  font-family: inherit;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  user-select: none;
+}
+
+.paginationButton:focus {
+  outline: 2px solid #9747ff;
+  outline-offset: 2px;
+}
+
+.paginationButton:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Navigation Button Styles */
+.paginationButtonNav {
+  width: 24px;
+  height: 24px;
+  color: #5f6368;
+  padding: 0;
+}
+
+.paginationButtonNav:hover:not(:disabled) {
+  background-color: #f5f5f5;
+  color: #000000;
+}
+
+.paginationButtonNav:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Page Button Styles */
+.paginationButtonPage {
+  min-width: 24px;
+  height: 24px;
+  color: #777777;
+  padding: 0 4px;
+}
+
+.paginationButtonPage:hover:not(:disabled) {
+  background-color: #f5f5f5;
+  color: #000000;
+}
+
+/* Active Page Button */
+.paginationButtonActive {
+  background-color: #f2f2f2;
+  color: #000000;
+  font-weight: 500;
+}
+
+.paginationButtonActive:hover {
+  background-color: #e8e8e8;
+}
+
+/* Disabled State */
+.paginationButtonDisabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Size Variants */
+.pagination--small .paginationButtonPage {
+  min-width: 20px;
+  height: 20px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.pagination--small .paginationButtonNav {
+  width: 20px;
+  height: 20px;
+}
+
+.pagination--small .paginationButtonNav svg {
+  width: 16px;
+  height: 16px;
+}
+
+.pagination--medium .paginationButtonPage {
+  min-width: 32px;
+  height: 32px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.pagination--medium .paginationButtonNav {
+  width: 24px;
+  height: 24px;
+}
+
+.pagination--large .paginationButtonPage {
+  min-width: 40px;
+  height: 40px;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.pagination--large .paginationButtonNav {
+  width: 32px;
+  height: 32px;
+}
+
+.pagination--large .paginationButtonNav svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Variant Styles */
+.pagination--primary .paginationButtonActive {
+  background-color: #f2f2f2;
+  color: #000000;
+}
+
+.pagination--secondary .paginationButtonActive {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.pagination--secondary .paginationButtonPage:hover:not(:disabled) {
+  background-color: #f3f9ff;
+  color: #1976d2;
+}
+
+.pagination--tertiary .paginationButtonActive {
+  background-color: #f3e5f5;
+  color: #7b1fa2;
+}
+
+.pagination--tertiary .paginationButtonPage:hover:not(:disabled) {
+  background-color: #faf5fc;
+  color: #7b1fa2;
+}
+
+/* Theme Styles */
+.pagination--dark {
+  color: #ffffff;
+}
+
+.pagination--dark .paginationButtonPage {
+  color: #a0a0a0;
+}
+
+.pagination--dark .paginationButtonPage:hover:not(:disabled) {
+  background-color: #404040;
+  color: #ffffff;
+}
+
+.pagination--dark .paginationButtonActive {
+  background-color: #404040;
+  color: #ffffff;
+}
+
+.pagination--dark .paginationButtonActive:hover {
+  background-color: #505050;
+}
+
+.pagination--dark .paginationButtonNav {
+  color: #a0a0a0;
+}
+
+.pagination--dark .paginationButtonNav:hover:not(:disabled) {
+  background-color: #404040;
+  color: #ffffff;
+}
+
+.pagination--dark .paginationButtonNav:disabled {
+  opacity: 0.3;
+}
+
+/* Dark Theme Variants */
+.pagination--dark.pagination--secondary .paginationButtonActive {
+  background-color: #1e3a8a;
+  color: #60a5fa;
+}
+
+.pagination--dark.pagination--secondary
+  .paginationButtonPage:hover:not(:disabled) {
+  background-color: #1e40af;
+  color: #60a5fa;
+}
+
+.pagination--dark.pagination--tertiary .paginationButtonActive {
+  background-color: #581c87;
+  color: #c084fc;
+}
+
+.pagination--dark.pagination--tertiary
+  .paginationButtonPage:hover:not(:disabled) {
+  background-color: #6b21a8;
+  color: #c084fc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pagination {
+    gap: 4px;
+  }
+
+  .paginationPages {
+    gap: 2px;
+  }
+
+  .pagination--medium .paginationButtonPage {
+    min-width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+
+  .pagination--large .paginationButtonPage {
+    min-width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .paginationButton {
+    transition: none;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .paginationButton {
+    border: 1px solid currentColor;
+  }
+
+  .paginationButtonActive {
+    border: 2px solid currentColor;
+  }
+}

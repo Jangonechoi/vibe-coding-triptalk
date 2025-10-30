@@ -1,0 +1,174 @@
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.title {
+  color: #000000;
+  font-family: var(--font-family-korean);
+  font-weight: 700;
+  font-size: var(--typography-b_28_36-font-size-mobile);
+  line-height: var(--typography-b_28_36-line-height-mobile);
+  margin: 0 0 24px 0;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: var(--typography-b_28_36-font-size-desktop);
+    line-height: var(--typography-b_28_36-line-height-desktop);
+  }
+}
+
+.cardArea {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(296px, 1fr));
+  gap: 32px;
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  background: #ffffff;
+  border-radius: 12px;
+  min-width: 296px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.cardImageWrapper {
+  position: relative;
+  width: 112px;
+  height: 152px;
+  flex-shrink: 0;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  min-height: 152px;
+}
+
+.cardContentTop {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 176px;
+}
+
+.cardTitle {
+  color: #1c1c1c;
+  font-family: var(--font-family-korean);
+  font-weight: 700;
+  font-size: var(--typography-b_16_24-font-size-mobile);
+  line-height: var(--typography-b_16_24-line-height-mobile);
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .cardTitle {
+    font-size: var(--typography-b_16_24-font-size-desktop);
+    line-height: var(--typography-b_16_24-line-height-desktop);
+  }
+}
+
+.cardFooter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.profileImageWrapper {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.profileImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.profileName {
+  color: #5f5f5f;
+  font-family: var(--font-family-korean);
+  font-weight: 300;
+  font-size: var(--typography-l_14_20-font-size-mobile);
+  line-height: var(--typography-l_14_20-line-height-mobile);
+}
+
+@media (min-width: 768px) {
+  .profileName {
+    font-size: var(--typography-l_14_20-font-size-desktop);
+    line-height: var(--typography-l_14_20-line-height-desktop);
+  }
+}
+
+.likes {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.likesIcon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.likesCount {
+  color: #f66a6a;
+  font-family: var(--font-family-korean);
+  font-weight: 400;
+  font-size: var(--typography-r_14_20-font-size-mobile);
+  line-height: var(--typography-r_14_20-line-height-mobile);
+}
+
+@media (min-width: 768px) {
+  .likesCount {
+    font-size: var(--typography-r_14_20-font-size-desktop);
+    line-height: var(--typography-r_14_20-line-height-desktop);
+  }
+}
+
+.date {
+  color: #777777;
+  font-family: var(--font-family-korean);
+  font-weight: 400;
+  font-size: var(--typography-r_14_20-font-size-mobile);
+  line-height: var(--typography-r_14_20-line-height-mobile);
+}
+
+@media (min-width: 768px) {
+  .date {
+    font-size: var(--typography-r_14_20-font-size-desktop);
+    line-height: var(--typography-r_14_20-line-height-desktop);
+  }
+}

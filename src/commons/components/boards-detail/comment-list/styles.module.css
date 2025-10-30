@@ -1,0 +1,255 @@
+.container {
+  width: 100%;
+}
+
+/* 댓글 아이템 */
+.commentItem {
+  position: relative;
+}
+
+.commentItem:hover .actionButtons {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 댓글 헤더 (프로필, 별점, 액션 버튼) */
+.commentHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+  margin-bottom: 12px;
+}
+
+.profileAndStars {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.profileSection {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.profileImage {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.authorName {
+  font-size: var(--typography-l_14_20-font-size-mobile);
+  line-height: var(--typography-l_14_20-line-height-mobile);
+  font-weight: var(--typography-l_14_20-font-weight);
+  font-family: var(--typography-l_14_20-font-family);
+  color: var(--color-gray-700);
+}
+
+/* 별점 영역 */
+.starRating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.starIcon {
+  display: flex;
+  align-items: center;
+}
+
+.star {
+  transition: opacity 0.2s ease;
+}
+
+.starFilled {
+  opacity: 1;
+}
+
+.starEmpty {
+  opacity: 0.3;
+}
+
+/* 액션 버튼 */
+.actionButtons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+}
+
+.actionButton {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.actionButton:hover {
+  opacity: 1;
+}
+
+/* 댓글 내용 */
+.commentContent {
+  margin-bottom: 12px;
+}
+
+.commentText {
+  font-size: var(--typography-r_16_24-font-size-mobile);
+  line-height: var(--typography-r_16_24-line-height-mobile);
+  font-weight: var(--typography-r_16_24-font-weight);
+  font-family: var(--typography-r_16_24-font-family);
+  color: var(--color-gray-800);
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+/* 편집 영역 */
+.editArea {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.editTextarea {
+  width: 100%;
+  min-height: 80px;
+  border: 1px solid var(--color-gray-200);
+  border-radius: 8px;
+  padding: 12px;
+  font-size: var(--typography-r_16_24-font-size-mobile);
+  line-height: var(--typography-r_16_24-line-height-mobile);
+  font-weight: var(--typography-r_16_24-font-weight);
+  font-family: var(--typography-r_16_24-font-family);
+  color: var(--color-gray-B);
+  background-color: var(--color-gray-w);
+  resize: vertical;
+}
+
+.editTextarea:focus {
+  outline: none;
+  border-color: var(--color-primary-main);
+}
+
+.editButtons {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.cancelButton {
+  padding: 8px 16px;
+  border: 1px solid var(--color-gray-200);
+  border-radius: 8px;
+  background-color: var(--color-gray-w);
+  color: var(--color-gray-700);
+  font-size: var(--typography-r_14_20-font-size-mobile);
+  line-height: var(--typography-r_14_20-line-height-mobile);
+  font-weight: var(--typography-r_14_20-font-weight);
+  font-family: var(--typography-r_14_20-font-family);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cancelButton:hover {
+  background-color: var(--color-gray-50);
+}
+
+.saveButton {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--color-gray-B);
+  color: var(--color-gray-w);
+  font-size: var(--typography-r_14_20-font-size-mobile);
+  line-height: var(--typography-r_14_20-line-height-mobile);
+  font-weight: var(--typography-r_14_20-font-weight);
+  font-family: var(--typography-r_14_20-font-family);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.saveButton:hover {
+  background-color: var(--color-gray-800);
+}
+
+/* 날짜 */
+.commentDate {
+  margin-bottom: 40px;
+}
+
+.dateText {
+  font-size: var(--typography-r_14_20-font-size-mobile);
+  line-height: var(--typography-r_14_20-line-height-mobile);
+  font-weight: var(--typography-r_14_20-font-weight);
+  font-family: var(--typography-r_14_20-font-family);
+  color: var(--color-gray-500);
+}
+
+/* 구분선 */
+.commentDivider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-gray-100);
+}
+
+/* 댓글 없음 메시지 */
+.noComment {
+  text-align: center;
+  padding: 40px 0;
+  font-size: var(--typography-r_16_24-font-size-mobile);
+  line-height: var(--typography-r_16_24-line-height-mobile);
+  font-weight: var(--typography-r_16_24-font-weight);
+  font-family: var(--typography-r_16_24-font-family);
+  color: var(--color-gray-400);
+}
+
+/* 데스크톱 스타일 */
+@media (min-width: 768px) {
+  .authorName {
+    font-size: var(--typography-l_14_20-font-size-desktop);
+    line-height: var(--typography-l_14_20-line-height-desktop);
+  }
+
+  .commentText {
+    font-size: var(--typography-r_16_24-font-size-desktop);
+    line-height: var(--typography-r_16_24-line-height-desktop);
+  }
+
+  .editTextarea {
+    font-size: var(--typography-r_16_24-font-size-desktop);
+    line-height: var(--typography-r_16_24-line-height-desktop);
+  }
+
+  .cancelButton {
+    font-size: var(--typography-r_14_20-font-size-desktop);
+    line-height: var(--typography-r_14_20-line-height-desktop);
+  }
+
+  .saveButton {
+    font-size: var(--typography-r_14_20-font-size-desktop);
+    line-height: var(--typography-r_14_20-line-height-desktop);
+  }
+
+  .dateText {
+    font-size: var(--typography-r_14_20-font-size-desktop);
+    line-height: var(--typography-r_14_20-line-height-desktop);
+  }
+
+  .noComment {
+    font-size: var(--typography-r_16_24-font-size-desktop);
+    line-height: var(--typography-r_16_24-line-height-desktop);
+  }
+}

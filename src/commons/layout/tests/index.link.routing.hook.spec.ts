@@ -1,6 +1,5 @@
 import { test, expect } from "@playwright/test";
 import { URL_PATHS } from "@/commons/constants/url";
-import path from "path";
 
 test.describe("Layout header link routing", () => {
   test("logo click navigates to boards list", async ({ page }) => {

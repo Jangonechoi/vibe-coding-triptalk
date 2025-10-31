@@ -1,9 +1,9 @@
-'use client';
+"use client";
 // 아직 기능구현은 일부러안함
 // import { gql, useMutation } from '@apollo/client';
-import { useRouter } from 'next/navigation';
-import { useState } from 'react';
-import styles from './styles.module.css';
+// import { useRouter } from 'next/navigation';
+import { useState } from "react";
+import styles from "./styles.module.css";
 
 // const CREATE_USER = gql`
 //   mutation createUser($createUserInput: CreateUserInput!) {
@@ -16,16 +16,16 @@ import styles from './styles.module.css';
 // `;
 
 export default function SignupComponent() {
-  const router = useRouter();
-  const [email, setEmail] = useState('');
-  const [name, setName] = useState('');
-  const [password, setPassword] = useState('');
-  const [passwordConfirm, setPasswordConfirm] = useState('');
+  // const router = useRouter();
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
+  const [passwordConfirm, setPasswordConfirm] = useState("");
 
-  const [emailError, setEmailError] = useState('');
-  const [nameError, setNameError] = useState('');
-  const [passwordError, setPasswordError] = useState('');
-  const [passwordConfirmError, setPasswordConfirmError] = useState('');
+  const [emailError, setEmailError] = useState("");
+  const [nameError, setNameError] = useState("");
+  const [passwordError, setPasswordError] = useState("");
+  const [passwordConfirmError, setPasswordConfirmError] = useState("");
 
   // const [showSuccessModal, setShowSuccessModal] = useState(false);
 
@@ -33,22 +33,24 @@ export default function SignupComponent() {
 
   const onChangeEmail = (event: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(event.target.value);
-    if (emailError) setEmailError('');
+    if (emailError) setEmailError("");
   };
 
   const onChangeName = (event: React.ChangeEvent<HTMLInputElement>) => {
     setName(event.target.value);
-    if (nameError) setNameError('');
+    if (nameError) setNameError("");
   };
 
   const onChangePassword = (event: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(event.target.value);
-    if (passwordError) setPasswordError('');
+    if (passwordError) setPasswordError("");
   };
 
-  const onChangePasswordConfirm = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const onChangePasswordConfirm = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
     setPasswordConfirm(event.target.value);
-    if (passwordConfirmError) setPasswordConfirmError('');
+    if (passwordConfirmError) setPasswordConfirmError("");
   };
 
   const onClickSignup = async () => {
@@ -56,31 +58,31 @@ export default function SignupComponent() {
     let hasError = false;
 
     if (!email.trim()) {
-      setEmailError('이메일을 입력해 주세요.');
+      setEmailError("이메일을 입력해 주세요.");
       hasError = true;
     }
 
     if (!name.trim()) {
-      setNameError('이름을 입력해 주세요.');
+      setNameError("이름을 입력해 주세요.");
       hasError = true;
     }
 
     if (!password.trim()) {
-      setPasswordError('비밀번호를 입력해 주세요.');
+      setPasswordError("비밀번호를 입력해 주세요.");
       hasError = true;
     }
 
     if (!passwordConfirm.trim()) {
-      setPasswordConfirmError('비밀번호를 입력해 주세요.');
+      setPasswordConfirmError("비밀번호를 입력해 주세요.");
       hasError = true;
     }
 
     if (password && passwordConfirm && password !== passwordConfirm) {
-      setPasswordConfirmError('비밀번호가 일치하지 않습니다.');
+      setPasswordConfirmError("비밀번호가 일치하지 않습니다.");
       hasError = true;
     }
 
-    // if (hasError) return;
+    if (hasError) return;
 
     // try {
     //   await createUser({
@@ -117,7 +119,9 @@ export default function SignupComponent() {
           </div>
 
           <div className={styles.signupForm}>
-            <div className={styles.description}>회원가입을 위해 아래 빈칸을 모두 채워 주세요.</div>
+            <div className={styles.description}>
+              회원가입을 위해 아래 빈칸을 모두 채워 주세요.
+            </div>
 
             <div className={styles.inputGroup}>
               <div className={styles.inputWrapper}>
@@ -130,9 +134,13 @@ export default function SignupComponent() {
                   placeholder="이메일을 입력해 주세요."
                   onChange={onChangeEmail}
                   value={email}
-                  className={`${styles.input} ${emailError ? styles.inputError : ''}`}
+                  className={`${styles.input} ${
+                    emailError ? styles.inputError : ""
+                  }`}
                 />
-                {emailError && <div className={styles.errorMessage}>{emailError}</div>}
+                {emailError && (
+                  <div className={styles.errorMessage}>{emailError}</div>
+                )}
               </div>
 
               <div className={styles.inputWrapper}>
@@ -145,9 +153,13 @@ export default function SignupComponent() {
                   placeholder="이름을 입력해 주세요."
                   onChange={onChangeName}
                   value={name}
-                  className={`${styles.input} ${nameError ? styles.inputError : ''}`}
+                  className={`${styles.input} ${
+                    nameError ? styles.inputError : ""
+                  }`}
                 />
-                {nameError && <div className={styles.errorMessage}>{nameError}</div>}
+                {nameError && (
+                  <div className={styles.errorMessage}>{nameError}</div>
+                )}
               </div>
 
               <div className={styles.inputWrapper}>
@@ -160,9 +172,13 @@ export default function SignupComponent() {
                   placeholder="비밀번호를 입력해 주세요."
                   onChange={onChangePassword}
                   value={password}
-                  className={`${styles.input} ${passwordError ? styles.inputError : ''}`}
+                  className={`${styles.input} ${
+                    passwordError ? styles.inputError : ""
+                  }`}
                 />
-                {passwordError && <div className={styles.errorMessage}>{passwordError}</div>}
+                {passwordError && (
+                  <div className={styles.errorMessage}>{passwordError}</div>
+                )}
               </div>
 
               <div className={styles.inputWrapper}>
@@ -175,10 +191,14 @@ export default function SignupComponent() {
                   placeholder="비밀번호를 한번 더 입력해 주세요."
                   onChange={onChangePasswordConfirm}
                   value={passwordConfirm}
-                  className={`${styles.input} ${passwordConfirmError ? styles.inputError : ''}`}
+                  className={`${styles.input} ${
+                    passwordConfirmError ? styles.inputError : ""
+                  }`}
                 />
                 {passwordConfirmError && (
-                  <div className={styles.errorMessage}>{passwordConfirmError}</div>
+                  <div className={styles.errorMessage}>
+                    {passwordConfirmError}
+                  </div>
                 )}
               </div>
             </div>

@@ -1,11 +1,11 @@
-'use client';
+"use client";
 // 아직 기능구현은 일부러안함
 
 // import { useAccessTokenStore } from '@/commons/stores/access-token-store';
 // import { gql, useMutation } from '@apollo/client';
-import { useRouter } from 'next/navigation';
-import { useState } from 'react';
-import styles from './styles.module.css';
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+import styles from "./styles.module.css";
 
 // const LOGIN_USER = gql`
 //   mutation loginUser($email: String!, $password: String!) {
@@ -17,21 +17,21 @@ import styles from './styles.module.css';
 
 export default function LoginComponent() {
   const router = useRouter();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [emailError, setEmailError] = useState('');
-  const [passwordError, setPasswordError] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [passwordError, setPasswordError] = useState("");
 
   // const [loginUser] = useMutation(LOGIN_USER);
 
   const onChangeEmail = (event: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(event.target.value);
-    if (emailError) setEmailError(''); // 입력 시 에러 메시지 제거
+    if (emailError) setEmailError(""); // 입력 시 에러 메시지 제거
   };
 
   const onChangePassword = (event: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(event.target.value);
-    if (passwordError) setPasswordError(''); // 입력 시 에러 메시지 제거
+    if (passwordError) setPasswordError(""); // 입력 시 에러 메시지 제거
   };
 
   // const { setAccessToken } = useAccessTokenStore();
@@ -41,16 +41,16 @@ export default function LoginComponent() {
     let hasError = false;
 
     if (!email.trim()) {
-      setEmailError('이메일을 입력해 주세요');
+      setEmailError("이메일을 입력해 주세요");
       hasError = true;
     }
 
     if (!password.trim()) {
-      setPasswordError('아이디 또는 비밀번호를 확인해 주세요.');
+      setPasswordError("아이디 또는 비밀번호를 확인해 주세요.");
       hasError = true;
     }
 
-    // if (hasError) return;
+    if (hasError) return;
 
     // try {
     //   const result = await loginUser({
@@ -126,7 +126,9 @@ export default function LoginComponent() {
                 />
               </svg>
             </div>
-            <div className={styles.welcomeText}>트립트립에 오신걸 환영합니다.</div>
+            <div className={styles.welcomeText}>
+              트립트립에 오신걸 환영합니다.
+            </div>
           </div>
 
           <div className={styles.loginForm}>
@@ -139,9 +141,13 @@ export default function LoginComponent() {
                   placeholder="이메일을 입력해 주세요."
                   onChange={onChangeEmail}
                   value={email}
-                  className={`${styles.input} ${emailError ? styles.inputError : ''}`}
+                  className={`${styles.input} ${
+                    emailError ? styles.inputError : ""
+                  }`}
                 />
-                {emailError && <div className={styles.errorMessage}>{emailError}</div>}
+                {emailError && (
+                  <div className={styles.errorMessage}>{emailError}</div>
+                )}
               </div>
 
               <div className={styles.inputWrapper}>
@@ -150,9 +156,13 @@ export default function LoginComponent() {
                   placeholder="비밀번호를 입력해 주세요."
                   onChange={onChangePassword}
                   value={password}
-                  className={`${styles.input} ${passwordError ? styles.inputError : ''}`}
+                  className={`${styles.input} ${
+                    passwordError ? styles.inputError : ""
+                  }`}
                 />
-                {passwordError && <div className={styles.errorMessage}>{passwordError}</div>}
+                {passwordError && (
+                  <div className={styles.errorMessage}>{passwordError}</div>
+                )}
               </div>
             </div>
 
@@ -160,7 +170,10 @@ export default function LoginComponent() {
               <button onClick={onClickLogin} className={styles.loginButton}>
                 로그인
               </button>
-              <div className={styles.signupLink} onClick={() => router.push('/signup')}>
+              <div
+                className={styles.signupLink}
+                onClick={() => router.push("/auth/signup")}
+              >
                 회원가입
               </div>
             </div>
